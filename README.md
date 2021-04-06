@@ -1,43 +1,6 @@
-## Semantic HTML
-Semantic elements clearly defines its content.
-<br><br>
-Types of semantic HTML:
-<ul>
-<li>article</li>
-<li>aside</li>
-<li>details</li>
-<li>figcaption</li>
-<li>figure</li>
-<li>footer</li>
-<li>header</li>
-<li>main</li>
-<li>mark</li>
-<li>nav</li>
-<li>section</li>
-<li>summary</li>
-<li>time</li>
-</ul>
+# CSS Flexbox
 
-Non-semantic elements tell nothing about its content.
-<br><br>
-Examples: 
-<ul>
-<li>div</li>
-<li>span</li>
-</ul>
-
-## CSS Flexbox
-Before the Flexbox Layout module, there were four layout modes:
-<ul>
-<li>Block, for sections in a webpage</li>
-<li>Inline, for text</li>
-<li>Table, for two-dimensional table data</li>
-<li>Positioned, for explicit position of an element</li>
-</ul>
-To start using the Flexbox model, you need to first define a flex container.
-<ol>
-<li>div class="flex-container"</li>
-</ol>
+## CSS Flex Container (Parent Element)
 
 The flex container properties are:
 <ul>
@@ -93,3 +56,23 @@ The align-content property is used to align the flex lines.
 <li>The flex-start value displays the flex lines at the start of the container.</li>
 <li>The flex-end value displays the flex lines at the end of the container.</li>
 </ul>
+
+## CSS Flex Items (Child Elements)
+
+The flex item properties are:
+<ul>
+<li>The <u>order</u> property specifies the order of the flex items.</li>
+<li>The <u>flex-grow</u> property specifies how much a flex item will grow relative to the rest of the flex items.</li>
+<li>The <u>flex-shrink</u> property specifies how much a flex item will shrink relative to the rest of the flex items.</li>
+<li>The <u>flex-basis</u> property specifies the initial length of a flex item.</li>
+<li>The <u>align-self</u> property specifies the alignment for the selected item inside the flexible container.</li>
+</ul>
+
+
+
+
+
+
+
+
+
