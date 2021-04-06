@@ -27,7 +27,9 @@
   <div>2</div>
 </div>
 
-<h2>The flex-direction property</h2>
+<h2>CSS Flex Container (Parent Element)</h2>
+
+<h3>The flex-direction property</h3>
 
 <p>The <u>column</u> value stacks the flex items vertically (from top to bottom):</p>
 <div class="flex-container flex-column">
@@ -57,7 +59,7 @@
   <div>3</div>  
 </div>
 
-<h2>The flex-wrap Property</h2>
+<h3>The flex-wrap Property</h3>
 
 <p>The <u>wrap</u> value specifies that the flex items will wrap if necessary:</p>
 <div class="flex-container flex-wrap-property">
@@ -107,7 +109,7 @@
   <div>12</div>  
 </div>
 
-<h2>The justify-content Property</h2>
+<h3>The justify-content Property</h3>
 
 <p>The <u>center</u> value aligns the flex items at the center of the container:</p>
 <div class="flex-container justify-content-center">
@@ -144,7 +146,7 @@
   <div>3</div>  
 </div>
 
-<h2>The align-items Property</h2>
+<h3>The align-items Property</h3>
 
 <p>The <u>center</u> value aligns the flex items in the middle of the container:</p>
 <div class="flex-container align-center">
@@ -182,7 +184,7 @@
   <div><small>4</small></div>  
 </div>
 
-<h2>The align-content Property</h2>
+<h3>The align-content Property</h3>
 
 <p>The <u>space-between</u> value displays the flex lines with equal space between them:</p>
 <div class="flex-container align-space-between">
@@ -278,6 +280,147 @@
   <div>10</div>
   <div>11</div>
   <div>12</div>  
+</div>
+
+<h2>CSS Flex Items (Child Elements)</h2>
+
+<h3>The order Property</h3>
+
+<p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+<div class="flex-container2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+
+<p>The <u>order</u> property can change the order of the flex items:</p>
+<div class="flex-container2">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div> 
+  <div style="order: 1">4</div>
+</div>
+
+<h3>The flex-grow Property</h3>
+
+<p>The <u>flex-grow</u> property specifies how much a flex item will grow relative to the rest of the flex items.</p>
+<div class="flex-container2">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+
+<h3>The flex-shrink Property</h3>
+
+<p>The <u>flex-shrink</u> property specifies how much a flex item will shrink relative to the rest of the flex items.</p>
+<div class="flex-container2">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</div>
+
+<h3>The flex-basis Property</h3>
+
+<p>The <u>flex-basis</u> property specifies the initial length of a flex item.</p>
+<div class="flex-container2">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div>
+
+<h3>The align-self Property</h3>
+
+<p>The align-self property specifies the alignment for the selected item inside the flexible container.<br>
+    The align-self property overrides the default alignment set by the container's align-items property.</p>
+<div class="flex-container2 align-self-center">
+  <div>1</div>
+  <div>2</div>
+  <div style="align-self: center">3</div>
+  <div>4</div>
+</div>
+<br>
+<div class="flex-container2 align-self-center">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+
+<h2>CSS Flex Responsive</h2>
+
+<h3>Responsive Flexbox</h3>
+
+<p>The "flex-direction: row;" stacks the flex items horizontally (from left to right). <br>
+The "flex-direction: column;" stacks the flex items vertically (from top to bottom). <br>
+Resize the browser window to see that the direction changes when the screen size is 800px wide or smaller.</p>
+<div class="flex-container3">
+  <div class="flex-item-left">1</div>
+  <div class="flex-item-right">2</div>
+</div>
+
+<h3>Responsive Website using Flexbox</h3>
+
+<p>Use flexbox to create a responsive website, containing a flexible navigation bar and flexible content:</p>
+
+<!-- Note -->
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1>My Website</h1>
+  <p>With a <b>flexible</b> layout.</p>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
 </div>
 
 
