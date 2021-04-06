@@ -8,9 +8,7 @@
 </head>
 <body>
 <h1>CSS Flexbox</h1>
-
-<p>Use the class "flex-container".</p>
-<h3>With 10 items:</h3>
+<p>With 10 items:<p>
 <div class="flex-container">
   <div>1</div>
   <div>2</div>
@@ -23,7 +21,7 @@
   <div>9</div>
   <div>10</div>
 </div>
-<h3>With 2 items:</h3>
+<p>With 2 items:</p>
 <div class="flex-container">
   <div>1</div>
   <div>2</div>
@@ -31,28 +29,257 @@
 
 <h2>The flex-direction property</h2>
 
-<div>Default: The <u>row</u> value stacks the flex items horizontally (from left to right):</div>
-<br>
-<div>The <u>column</u> value stacks the flex items vertically (from top to bottom):</h3>
+<p>The <u>column</u> value stacks the flex items vertically (from top to bottom):</p>
 <div class="flex-container flex-column">
   <div>1</div>
   <div>2</div>
   <div>3</div>  
 </div>
 
-<div>The <u>column-reverse</u> value stacks the flex items vertically (but from bottom to top):</div>
+<p>The <u>column-reverse</u> value stacks the flex items vertically (but from bottom to top):</p>
 <div class="flex-container flex-reverse">
   <div>1</div>
   <div>2</div>
   <div>3</div>  
 </div>
 
-<div>The <u>row-reverse</u> value stacks the flex items horizontally (but from right to left):</div>
+<p>The <u>row</u> value stacks the flex items horizontally (from left to right):</p>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>row-reverse</u> value stacks the flex items horizontally (but from right to left):</p>
 <div class="flex-container flex-row-reverse">
   <div>1</div>
   <div>2</div>
   <div>3</div>  
 </div>
+
+<h2>The flex-wrap Property</h2>
+
+<p>The <u>wrap</u> value specifies that the flex items will wrap if necessary:</p>
+<div class="flex-container flex-wrap-property">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>nowrap</u> value specifies that the flex items will not wrap:</p>
+<div class="flex-container flex-wrap-nowrap">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>wrap-reverse</u> value specifies that the flexible items will wrap if necessary, in reverse order:</p>
+<div class="flex-container flex-warp-reverse">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<h2>The justify-content Property</h2>
+
+<p>The <u>center</u> value aligns the flex items at the center of the container:</p>
+<div class="flex-container justify-content-center">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>flex-start</u> value aligns the flex items at the beginning of the container:</p>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>flex-end</u> value aligns the flex items at the end of the container:</p>
+<div class="flex-container justify-flex-end">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>space-around</u> value displays the flex items with space before, between, and after the lines:</p>
+<div class="flex-container justify-space-around">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>space-between</u> value displays the flex items with space between the lines:</p>
+<div class="flex-container justify-space-between">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<h2>The align-items Property</h2>
+
+<p>The <u>center</u> value aligns the flex items in the middle of the container:</p>
+<div class="flex-container align-center">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>flex-start</u> value aligns the flex items at the top of the container:</p>
+<div class="flex-container align-flex-start">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>flex-end</u> value aligns the flex items at the bottom of the container:</p>
+<div class="flex-container align-flex-end">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>stretch</u> value stretches the flex items to fill the container:</p>
+<div class="flex-container align-stretch">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>The <u>baseline</u> value aligns the flex items such as their baselines aligns:</p>
+<div class="flex-container align-baseline">
+  <div><h1>1</h1></div>
+  <div><h6>2</h6></div>
+  <div><h3>3</h3></div>  
+  <div><small>4</small></div>  
+</div>
+
+<h2>The align-content Property</h2>
+
+<p>The <u>space-between</u> value displays the flex lines with equal space between them:</p>
+<div class="flex-container align-space-between">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>space-around</u> value displays the flex lines with space before, between, and after them:</p>
+<div class="flex-container align-space-around">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>stretch</u> value stretches the flex lines to take up the remaining space:</p>
+<div class="flex-container align-content-stretch">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>center</u> value displays display the flex lines in the middle of the container:</p>
+<div class="flex-container align-content-center">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>flex-start</u> value displays the flex lines at the start of the container:</p>
+<div class="flex-container align-content-flex-start">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+<p>The <u>flex-end</u> value displays the flex lines at the end of the container: </p>
+<div class="flex-container align-content-flex-end">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
 
 </body>
 </html>
