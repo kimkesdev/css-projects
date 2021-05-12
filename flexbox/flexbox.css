@@ -1,0 +1,250 @@
+.flex-container {
+  display: flex;
+  background-color: pink;
+}
+
+.flex-container> div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+/* The flex-direction property */
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* The flex-direction property */
+
+.flex-wrap-property {
+  flex-wrap: wrap;    
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-warp-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* The justify-content property */
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-space-around {
+  justify-content: space-around;   
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* The align-items property */
+
+.align-center {
+  height: 200px;
+  align-items: center;  
+}
+
+.align-flex-start {
+  height: 200px;
+  align-items: flex-start;   
+}
+
+.align-flex-end {
+  height: 200px;
+  align-items: flex-end;  
+}
+
+.align-stretch {
+  height: 200px;
+  align-items: stretch;  
+}
+
+.align-baseline {
+  height: 200px;
+  align-items: baseline;  
+}
+
+/* The align-content property */
+
+.align-space-between {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.align-space-around {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;  
+}
+
+.align-content-stretch {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: stretch;   
+}
+
+.align-content-center {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: center;  
+}
+
+.align-content-flex-start {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-start;  
+}
+
+.align-content-flex-end {
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-end;  
+}
+
+/* CSS Flex Items */
+
+.flex-container2 {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.flex-container2> div {
+  background-color: pink;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+/* The order Property */
+
+.align-self-center {
+  height: 200px;  
+}
+
+/* Responsive Flexbox */
+
+.flex-container3 {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: pink;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container3 {
+    flex-direction: column;
+  }
+}
+
+/* Flexbox Website */
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: pink;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: pink;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: pink;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
