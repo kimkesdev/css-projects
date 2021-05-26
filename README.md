@@ -16,3 +16,6 @@ Create with Bootstrap theme.
 
 ## Flip Card
 W3Schools
+
+## Profile Card
+W3Schools
