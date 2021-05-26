@@ -13,3 +13,6 @@ Create with formsubmit.
 ## Resume
 My personal resume. <br>
 Create with Bootstrap theme.
+
+## Flip Card
+W3Schools
