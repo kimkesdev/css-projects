@@ -1,0 +1,13 @@
+body {
+    background-color: #000000;
+}
+
+img {
+    margin: 100px;   
+    transition: transform 1s ease-in;
+    border-radius: 50%;
+}
+
+img:hover {
+    transform: scale(2);
+}
