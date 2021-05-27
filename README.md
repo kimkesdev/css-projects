@@ -14,8 +14,5 @@ Create with formsubmit.
 My personal resume. <br>
 Create with Bootstrap theme.
 
-## Flip Card
-W3Schools
-
-## Profile Card
+## Flip Card, Profile Card, Cutout Text
 W3Schools
