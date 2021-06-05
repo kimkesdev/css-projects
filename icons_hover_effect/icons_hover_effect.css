@@ -1,7 +1,7 @@
 * {
     margin: 0;
 }
-.container{
+.icons-container{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ a{
     color:#fff;
     transition: .4s;
 }
-span{
+.social-span{
     position: absolute;
     top:0;
     display: block;
@@ -29,26 +29,26 @@ span{
     z-index: -1;
     transition: .4s;
 }
-a:nth-child(1),a:nth-child(1) span{
+a:nth-child(1),a:nth-child(1) .social-span{
     background: #121212;
 }
-a:nth-child(2),a:nth-child(2) span{
+a:nth-child(2),a:nth-child(2) .social-span{
     background: #0077b5;
 }
-a:nth-child(3),a:nth-child(3) span{
+a:nth-child(3),a:nth-child(3) .social-span{
     background: #3b5998;
 }
-a:nth-child(4),a:nth-child(4) span{
+a:nth-child(4),a:nth-child(4) .social-span{
     background: #dd2a7b;
 }
-a:nth-child(5),a:nth-child(5) span{
+a:nth-child(5),a:nth-child(5) .social-span{
     background: #00acee;
 }
-a:hover span{
+a:hover .social-span{
     transform: scale(1.1);
     opacity: .5;
 }
-a:hover span:nth-child(2){
+a:hover .social-span:nth-child(2){
     transform: scale(1.2);
     opacity: .2;
 }
