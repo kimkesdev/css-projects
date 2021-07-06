@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="test.css">
-    <title>Document</title>
+    <title>Buttons</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            width: 130px;
+            height: 40px;
+            font-size: 1.1em;
+            cursor: pointer;
+            background: #171717;
+            color: white;
+            border: none;
+            transition: all .4s;
+        }
+        .btn:hover{
+            border-radius: 5px;
+            transform: translateY(-10px);
+            box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db, 0 16px 10px -3px #39a2db;
+        }
+    </style>
 </head>
 <body>
-
+    <div>
+        <h1>Button 1</h1>
+            <button class="btn">Hover Me!</button>
+    </div>
 </body>
 </html>
