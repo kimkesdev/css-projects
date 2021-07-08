@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stroke text</title>
+    <style>
+        svg{
+            background:#fff;
+        }
+        svg text{
+            font-size:5rem;
+            stroke-width:3px;
+            fill:transparent;
+            stroke:#ff3b63;
+            letter-spacing:2px;
+            animation:effect 6s infinite alternate;
+        }
+        @keyframes effect{
+            0%{
+                stroke-dasharray:0 70%;
+            }
+            100%{
+                stroke-dasharray:50% 0;
+                stroke-dashoffset:10%;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <svg width="100vw" height="100vh">
+        <text x="45%" y="55%">Dream</text>
+    </svg>
 </body>
 </html>
