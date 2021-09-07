@@ -1,0 +1,181 @@
+    *{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    html{
+    font-size: 62.5%;
+    }
+    body{
+    font-size: 16px;
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
+    background-size: 160rem;
+    background-repeat: no-repeat;
+    width: 120rem;
+    height: 80rem;
+    }
+   @media (min-width: 1920px) {
+    body{
+     background-size: 200rem;
+    }
+    .footer{
+        width: 200rem;
+    }
+   }
+    .navigation{
+    position: fixed;
+    width: 2rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.596);
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 3rem;
+    }
+    .navigation:hover{
+    width: 20rem;
+    }
+    .navigation ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    }
+    .navigation ul li{
+    width: 100%;
+    list-style: none;
+    }
+    li:hover{
+    background: #52c571b2;
+    align-items: center;
+    }
+    .navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    }
+    .navigation ul li a .icono{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    }
+    .titulo{
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+    }
+    .footer{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    padding: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 2rem;
+    color:  white;
+    font-size: 2rem;
+    text-align: center;
+    width: 120rem;
+    bottom: 0;
+    } 
+    a{
+        text-decoration: none;
+    }
+    .footer-enlace:hover{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgba(255, 55, 55, 0.768);
+    transition: padding-left 3s;
+    }
+    @media (min-width: 1920px) {
+    .footer{
+        width: 1920px;
+    }
+   }
+   @media (max-width: 1900px) {
+    body{
+     width: 70%;
+     height: 80%;
+    }
+   }  
+   @media (max-width: 500px) {
+    body{
+     overflow: hidden;
+     width: 20%;
+     height: 20%;
+    }
+    .footer{
+        width: 100%;
+        height: 10rem;
+        padding: 1rem;
+    }
+   .footer a{
+        width: 1rem;
+        height: 1rem;
+    }
+   .navigation ul li a{
+    width: 20%;
+    }
+    .titulo{
+        font-size:1.5rem;
+    }
+    .navigation{
+    width: 2rem;
+    height: 100%;
+    padding: 3rem;
+    padding-bottom: 4rem;
+    }
+    .icono img{
+    width: 3rem;
+    height: 3rem;
+    }
+    a svg{
+    width: 5rem;
+    height: 5rem;
+    }
+    p{
+    font-size: 1.3rem;
+    }
+    .boton .button{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 50rem;
+    width: 35%;
+    bottom: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    background: linear-gradient(100deg,#16d01f,#e7cc34);
+    border-radius: 45px;
+    cursor: pointer;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    }
+   }
+    .boton .button{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 20rem;
+    width: 36%;
+    bottom: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    background: linear-gradient(100deg,#16d01f,#e7cc34);
+    border-radius: 45px;
+    cursor: pointer;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+}
