@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column; background-image:url(https://images.unsplash.com/photo-1547822686-8ba163e1122a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60);
+            background-size:cover;
+        }
+        .main{
+            height: 400px;
+            width: 250px;
+            transform-style: preserve-3d;
+            transition: all 1.5s ease;
+            perspective: 500px;
+        }
+        .front{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 900;
+            background: rgba(255,255,255,0.2);
+            color:#262626;
+            flex-direction:column;
+            backdrop-filter:blur(5px);
+            border-radius:2px 25px 2px 2px;
+            border:1px solid rgba(255,255,255,0.2);
+        }
+        .back{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 900;
+            background: rgba(255,255,255,0.2);
+            color:#262626;
+            backdrop-filter:blur(5px);
+            transform: rotateY(180deg);
+            flex-direction:column;
+            border-radius: 25px 2px 2px 2px;
+            border:1px solid rgba(255,255,255,0.2);   
+        }
+        input{
+            position: fixed;
+            height:400px;
+            width: 250px;
+            z-index: 1;
+            opacity:0;
+            appearance: none;
+        }
+        input:checked ~ .main{
+            transform: rotateY(180deg);
+        }
+        p{
+            font-size:10px;
+            text-align:center;
+        }
+        a{
+            position:fixed;
+            bottom:50px;
+            color:#fff;
+            background:red;
+            text-decoration:none;
+            height:25px;
+            font-weight:800;
+            opacity:0.5;
+        }
+        b{
+            color:lime;
+        }
+        h2{
+            color:#fff;
+            position:fixed;
+            top:50px;
+        }
+    </style>
+</head>
+
+<body>
+<h2><b>CSS</b> 3D Flip Card</h2>
+    <input type="checkbox">
+<div class="main">
+    <div class="front">Front<p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Suspendisse ac velit enim. Phasellus non vehicula lectus. Nulla. <br> Fusce sed malesuada sapien. Nulla id nulla quis lacus lacinia semper. Sed gravida elit vitae elit eleifend consequat. <br> ac molestie odio, eu egestas mi.
+    </p></div>
+    <div class="back">Back
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse <br> velit enim. Phasellus non vehicula lectus. Nulla facilisi. Fusce sed malesuada sapien.<br> Nulla id nulla quis lacus lacinia semper. Sed gravida elit vitae elit eleifend consequat.<br> Quisque ac molestie odio, eu egestas mi.</p></div>
+</div>
+</body>
+
+</html>
