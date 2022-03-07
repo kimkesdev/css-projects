@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display two divs next to each other</title>
+    <style>
+        <!-- inline-block -->
+        .element1 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: #ce8888;
+        }
+        <!-- flexblox -->
+        .container1 {
+            display: flex;
+        }
+        .item1 {
+            background: #ce8888;
+            flex-basis: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        <!-- grid -->
+        .container2 {
+            display: grid;
+            grid-template-columns: 100px 100px; 
+            grid-template-rows: 100px;
+            grid-column-gap: 5px;
+      }    
+      .item2 {
+        background: #ce8888;
+      }
+      <!-- display table -->
+      .container3 {
+        display: table;
+        width: 20%;
+        }
+        .table-row { 
+        display: table-row;
+        height: 100px;
+        }
+        .table-cell {
+        border: 1px solid;
+        background: #ce8888;
+        display: table-cell;
+        padding: 2px;
+        }
+        <!-- float -->
+        .element2 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: #ce8888;
+            margin: 5px
+            }
+    </style>
+</head>
+<body>
+
+<!-- inline-block -->
+<h1>Using display: inline-block</h1>
+<div class="element1">
+</div>
+<div class="element1">
+</div>
+
+<!-- flexblox -->
+<h1>Using flexbox</h1>
+<div class="container1">
+    <div class="item1">
+    </div>
+    <div class="item1">
+    </div>
+</div>
+
+<!-- grid -->
+<h1>Using css grid</h1>
+<div class="container2">
+    <div class="item2">
+    </div>
+    <div class="item2">
+    </div>
+  </div>
+
+<!-- display table -->
+<h1>Using display table</h1>
+<div class="container3">
+    <div class="table-row">
+     <div class="table-cell">
+      </div>
+      <div class="table-cell">
+      </div>
+    </div>
+</div>
+
+<!-- float -->
+<h1>Using float property</h1>
+  <div class="element2">
+  </div>
+  <div class="element2">
+</div>
+
+</body>
+</html>
