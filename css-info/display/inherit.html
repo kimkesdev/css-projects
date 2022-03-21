@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 2rem;
+        }
+
+        span {background-color: rgb(129, 247, 211);}
+        span .one{display: inherit;}
+        span .two{display: initial;}
+    </style>
+</head>
+<body>
+    <h1>Global values</h1>
+
+    <h2>Display Inherit</h2>
+    <div>
+        This is some example text with display: 
+        <span class="one">inherit.</span> 
+        See the difference.
+  </div>
+
+  <h2>Display Initial</h2>
+    <div>
+        This is some example text with display: 
+        <span class="two">initial.</span> 
+        See the difference.
+  </div>
+</body>
+</html>
