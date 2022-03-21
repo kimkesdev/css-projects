@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        #allflex {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        }
+        #sand1 {flex: 0 1 200px;}
+        #sand2 {flex: 0 0 50px;}
+        #sand3 {flex: 3 0 auto;}
+        #sand4 {flex: 0 3 auto;}
+    </style>
+</head>
+<body>
+    <h1>Display Flex</h1>
+    
+    <p>All display: flex, width: 100% and height: 100px.</p>
+    <p>Sand has an extra id with flex: 0 1 200px</p>
+
+    <div id="allflex">
+        <div style="background-color:#83FEFF;">Ocean</div>
+        <div id="sand1" style="background-color:#FEF6AE;">Sand</div>
+        <div style="background-color:#FFB883;">Sunrise</div>
+        <div style="background-color:#4A8E6F;">Forrest</div>
+    </div>
+
+    <p>Sand id changed to flex: 0 0  50px</p>
+    <div id="allflex">
+        <div style="background-color:#83FEFF;">Ocean</div>
+        <div id="sand2" style="background-color:#FEF6AE;">Sand</div>
+        <div style="background-color:#FFB883;">Sunrise</div>
+        <div style="background-color:#4A8E6F;">Forrest</div>
+    </div>
+
+    <p>Sand id changed to flex: 3 0  auto</p>
+    <div id="allflex">
+        <div style="background-color:#83FEFF;">Ocean</div>
+        <div id="sand3" style="background-color:#FEF6AE;">Sand</div>
+        <div style="background-color:#FFB883;">Sunrise</div>
+        <div style="background-color:#4A8E6F;">Forrest</div>
+    </div>
+
+    <p>Sand id changed to flex: 0 3  auto</p>
+    <div id="allflex">
+        <div style="background-color:#83FEFF;">Ocean</div>
+        <div id="sand4" style="background-color:#FEF6AE;">Sand</div>
+        <div style="background-color:#FFB883;">Sunrise</div>
+        <div style="background-color:#4A8E6F;">Forrest</div>
+    </div>
+
+</div>
+
+</body>
+</html>
