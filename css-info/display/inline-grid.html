@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .box {
+        background-color: skyblue;
+        width: 100px;
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 5px;
+        padding: 5px;
+        }
+        .box div {border: 1px solid white;}
+        .box.is-inline-grid {display: inline-grid;}
+        h3 {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h3>Inline-grid with inline elements</h3>
+        <span>foo</span>
+        <div class="box is-inline-grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <span>bar</span>
+        
+        <h3>Grid with inline elements</h3>
+        <span>foo</span>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <span>bar</span>
+</body>
+</html>
