@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar on Image</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif}
+        * {box-sizing: border-box;}
+        .bg-img {
+          background-image: url("https://cdn.pixabay.com/photo/2017/03/26/21/54/yoga-2176668_960_720.jpg");
+          min-height: 380px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        .container {
+          position: absolute;
+          margin: 20px;
+          width: auto;
+        }
+        .topnav {
+          overflow: hidden;
+          background-color: rgb(9, 73, 54);
+        }
+        .topnav a {
+          float: left;
+          color: #a6fcad;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        .topnav a:hover {
+          background-color: rgb(143, 189, 157);
+          color: rgb(24, 73, 36);
+        }
+    </style>
+    </head>
+    <body>
+        
+        <div class="bg-img">
+          <div class="container">
+            <div class="topnav">
+              <a href="#remco">Remco</a>
+              <a href="#kim">Kim</a>
+              <a href="#nikki">Nikki</a>
+              <a href="#nina">Nina</a>
+            </div>
+          </div>
+        </div>
+    
+</body>
+</html>
