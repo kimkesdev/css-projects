@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidenav hover</title>
+    <style>
+        #mySidenav a {
+          position: absolute;
+          left: -80px;
+          transition: 0.3s;
+          padding: 15px;
+          width: 100px;
+          text-decoration: none;
+          font-size: 20px;
+          color: white;
+          border-radius: 0 5px 5px 0;
+        }
+        #mySidenav a:hover {
+          left: 0;
+        }
+        #remco {
+          top: 20px;
+          background-color: #66d4ac;
+        }
+        #kim {
+          top: 80px;
+          background-color: #92328a;
+        }
+        #nikki {
+          top: 140px;
+          background-color: #021894;
+        }
+        #nina {
+          top: 200px;
+          background-color: rgb(3, 184, 216)
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div id="mySidenav" class="sidenav">
+          <a href="#" id="remco">Remco</a>
+          <a href="#" id="kim">Kim</a>
+          <a href="#" id="nikki">Nikki</a>
+          <a href="#" id="nina">Nina</a>
+        </div>
+        
+        <div style="margin-left:80px;">
+          <h2>Hover over the sidenav to open the menu</h2>
+        </div>
+    
+</body>
+</html>
