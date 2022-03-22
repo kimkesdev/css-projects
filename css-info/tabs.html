@@ -42,10 +42,10 @@
         <p>Click on a name.</p>
         
         <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'Remco')">Remco</button>
-          <button class="tablinks" onclick="openCity(event, 'Kim')">Kim</button>
-          <button class="tablinks" onclick="openCity(event, 'Nikki')">Nikki</button>
-          <button class="tablinks" onclick="openCity(event, 'Nina')">Nina</button>
+          <button class="tablinks" onclick="openName(event, 'Remco')">Remco</button>
+          <button class="tablinks" onclick="openName(event, 'Kim')">Kim</button>
+          <button class="tablinks" onclick="openName(event, 'Nikki')">Nikki</button>
+          <button class="tablinks" onclick="openName(event, 'Nina')">Nina</button>
         </div>
         
         <div id="Remco" class="tabcontent">
@@ -65,7 +65,7 @@
         </div>
         
     <script>
-        function openCity(evt, cityName) {
+        function openName(evt, firstName) {
           var i, tabcontent, tablinks;
           tabcontent = document.getElementsByClassName("tabcontent");
           for (i = 0; i < tabcontent.length; i++) {
@@ -75,7 +75,7 @@
           for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
           }
-          document.getElementById(cityName).style.display = "block";
+          document.getElementById(firstName).style.display = "block";
           evt.currentTarget.className += " active";
         }
     </script>
