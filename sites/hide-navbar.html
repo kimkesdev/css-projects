@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Navbar</title>
+    <style>
+        body {
+          margin: 0;
+          background-color: #fbe4fc;
+          font-family: Arial, Helvetica, sans-serif;
+        }  
+        #navbar {
+          background-color: rgb(95, 20, 95);
+          position: fixed;
+          top: 0;
+          width: 100%;
+          display: block;
+          transition: top 0.3s;
+        }   
+        #navbar a {
+          float: left;
+          display: block;
+          color: #c2fff2;
+          text-align: center;
+          padding: 15px;
+          text-decoration: none;
+          font-size: 17px;
+        }  
+        #navbar a:hover {
+          background-color: rgb(243, 207, 237);
+          color: rgb(90, 31, 80);
+        }
+    </style>
+    </head>
+    <body>
+        
+        <div id="navbar">
+          <a href="#remco">Remco</a>
+          <a href="#kim">Kim</a>
+          <a href="#nikki">Nikki</a>
+          <a href="#nina">Nina</a>
+        </div>
+        
+        <div style="padding:15px 15px 2500px;font-size:30px;margin-top:30px;">
+          <p><b>This example demonstrates how to hide a navbar when the user starts to scroll the page.</b></p>
+         <h2>Hide Navbar after scrolling.</h2>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+         <p>Text text text.</p>
+        </div>
+        
+        <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+        </script>
+    
+</body>
+</html>
