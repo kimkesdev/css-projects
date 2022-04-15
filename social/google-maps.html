@@ -2,6 +2,7 @@
   <head>
     <title>Add Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     <style>
         /* Set the size of the div element that contains the map */
 #map {
@@ -10,7 +11,7 @@
   width: 100%;
   /* The width is the width of the web page */
 }
-    </style>
+</style>
   </head>
   <body>
     <h3>My Google Maps Demo</h3>
@@ -23,10 +24,6 @@
      and consistent behavior across browsers, consider loading using Promises
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
     <script>
         // Initialize and add the map
 function initMap() {
@@ -45,6 +42,11 @@ function initMap() {
 }
 
 window.initMap = initMap;
-</script>
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+
   </body>
 </html>
