@@ -17,12 +17,9 @@
         }
         .button1:hover{background-color: aquamarine;}
         .button2{transition-property: all;transition-duration: 1s;}
-        .button2:hover{
-            background-color: lightgreen;
-            color:black;
-            width: 600px;
-        }
-        .button3{transition: background-color 3s ease-in-out;}
+        .button2:hover{background-color: lightgreen; color:black; width: 600px;}
+        .button3{transition: background-color 3s ease-in-out 1s, color 2s ease 4s, border-radius 4s ease-out 6s;}
+        .button3:hover{background-color: pink; color: black; border-radius: 50%;}
     </style>
 </head>
 <body>
@@ -37,8 +34,8 @@
     <p>Changes: background-color/color/width</p>
     <button class="button2">Transition-property</button>
 
-    <h2>Transition background-color</h2>
-    <p>transition: background-color 3s ease-in-out</p>
+    <h2>Transition background-color/color/border-radius</h2>
+    <p>transition: ackground-color 3s ease-in-out 1s, color 2s ease 4s, border-radius 4s ease-out 6s;</p>
     <button class="button3">Transition</button>
 </body>
 </html>
