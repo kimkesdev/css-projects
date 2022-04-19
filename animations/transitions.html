@@ -12,7 +12,8 @@
             font-size: 28px;
             columns: white;
             border: none;
-            background-color: green;
+            background-color: olive;
+            border-radius: 5%;
         }
         .button1:hover{background-color: aquamarine;}
         .button2{transition-property: all;transition-duration: 1s;}
@@ -21,15 +22,23 @@
             color:black;
             width: 600px;
         }
+        .button3{transition: background-color 3s ease-in-out;}
     </style>
 </head>
 <body>
     <h1>Transitions</h1>
     
-    <h2>:hover change background color</h2>
+    <h2>Hover</h2>
+    <p>:hover change background color</p>
     <button class="button1">Hover</button>
 
-    <h2>Transition-property:all & transition-duration: 1s</h2>
-    <button class="button2">Hover</button>
+    <h2>Transition-property & transition-duration</h2>
+    <p>Transition-property:all & transition-duration: 1s</p>
+    <p>Changes: background-color/color/width</p>
+    <button class="button2">Transition-property</button>
+
+    <h2>Transition background-color</h2>
+    <p>transition: background-color 3s ease-in-out</p>
+    <button class="button3">Transition</button>
 </body>
 </html>
