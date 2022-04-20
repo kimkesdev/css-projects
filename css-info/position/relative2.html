@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.text {
+  padding: .5em;
+  background: #82D7FF;
+  border: 1px solid lightcyan;
+}
+.parent, .parent2, .child, .child2 {
+  padding: .5em;
+  margin: .5em;
+  color: #fff;
+}
+.parent, .parent2 {
+  width: 200px;
+  background: #82D7FF;
+}
+.child, .child2 {
+  background: #FF82A5;
+}
+.child2 {
+  position: relative;
+  bottom: 30px;
+  right: -120px;
+}
+</style>
+</head>
+<body>
+    <div>before move</div>
+<div class="parent">
+  <div class="text">parent start</div>
+  <div class="child">before move child</div>
+  <div class="text">parent end</div>
+</div>
+<div>after move</div>
+<div class="parent2">
+  <div class="text">parent start</div>
+  <div class="child2">after move child</div>
+  <div class="text">parent end</div>
+</div>
+</body>
+</html>
