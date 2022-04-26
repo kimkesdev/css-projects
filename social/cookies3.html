@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <style>
+        .cookieBox {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #dedede;
+	&__container {
+		width: 980px;
+		max-width: 100%;
+		height: 90px;
+		margin: 0 auto;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+	&__image {
+		margin-right: 20px;
+		img {
+			height: 40px;
+			object-fit: contain;
+			opacity: .6;
+		}
+	}
+	&__text {
+		p {
+			line-height: 1.4;
+			color: rgba(0,0,0,.6);
+		}
+		a {
+			color: rgba(0,0,0,.8);
+		}
+	}
+	&__button {
+		a {
+			width: 150px;
+			height: 40px;
+			margin-left: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: solid 2px rgba(0,0,0,.6);
+			border-radius: 50px;
+			color: rgba(0,0,0,.6);
+			text-decoration: none;
+			font-weight: bold;
+			transition: all .2s;
+			&:hover {
+				opacity: .9;
+			}
+		}
+	}
+}
+
+// Global
+* {
+	box-sizing: border-box;	
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: "Arial", sans-serif;
+	font-size: .875rem;
+	font-weight: 400;
+}
+    </style>
+</head>
+<body>
+    <div class="cookieBox">
+        <div class="cookieBox__container">
+            <div class="cookieBox__image">
+                <img src="cookie.svg" alt="Cookie image">
+            </div>
+            <div class="cookieBox__text">
+                <p>Ons cookie beleid, bla bla bla........... <a href="#!">cookies</a>.</p>
+            </div>
+            <div class="cookieBox__button">
+                <a href="#!">Accepteer cookies</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
