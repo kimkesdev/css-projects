@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@keyframes sun_radiate {
+  0% {
+    box-shadow: 0 0 10vmax 1vmax #EEA019;
+  }
+  50% {
+    box-shadow: 0 0 15vmax 1vmax #EEA019;
+  }
+  80% {
+    box-shadow: 0 0 20vmax 1vmax #EEA019;
+  }
+  100% {
+    box-shadow: 0 0 10vmax 1vmax #EEA019;
+  }
+}
+@keyframes cloud_drift {
+  0% {
+    left: -25vmax;
+  }
+  100% {
+    left: 125vmax;
+  }
+}
+@keyframes cloud_drift_2 {
+  0% {
+    left: 125vmax;
+  }
+  100% {
+    left: -25vmax;
+  }
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(to top, #2C9C92, #37c4b7);
+  overflow: hidden;
+}
+
+body * {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#sun {
+  left: 0;
+  top: 0;
+  transform: translateX(-40%) translateY(-40%);
+  width: 40vmax;
+  height: 40vmax;
+  border-radius: 50%;
+  background: radial-gradient(#FF9012, #EEA019);
+  animation: sun_radiate 4s ease;
+  animation-iteration-count: infinite;
+  filter: blur(0.1vmax);
+  -webkit-filter: blur(0.1vmax);
+}
+
+#clouds {
+  position: relative;
+  height: 100%;
+}
+#clouds .cloud {
+  left: -100%;
+  filter: blur(1vmax);
+  -webkit-filter: blur(1vmax);
+  opacity: 0.75;
+  background: #fff;
+}
+#clouds .cloud::before, #clouds .cloud::after {
+  display: block;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* clouds will be one of four "random" shapes */
+#clouds .cloud:nth-child(4n+1) {
+  width: 23vmax;
+  height: 7vmax;
+  border-radius: 7vmax;
+}
+#clouds .cloud:nth-child(4n+1)::before {
+  width: 9vmax;
+  height: 9vmax;
+  margin-left: 3vmax;
+  margin-top: -3vmax;
+}
+#clouds .cloud:nth-child(4n+1)::after {
+  width: 12vmax;
+  height: 12vmax;
+  margin-left: 8vmax;
+  margin-top: -12vmax;
+}
+
+#clouds .cloud:nth-child(4n+2) {
+  width: 15vmax;
+  height: 10vmax;
+  border-radius: 5vmax;
+}
+#clouds .cloud:nth-child(4n+2)::before {
+  width: 9vmax;
+  height: 9vmax;
+  margin-left: 3vmax;
+  margin-top: -3vmax;
+}
+#clouds .cloud:nth-child(4n+2)::after {
+  width: 12vmax;
+  height: 12vmax;
+  margin-left: 8vmax;
+  margin-top: -6vmax;
+}
+
+#clouds .cloud:nth-child(4n+3) {
+  width: 25vmax;
+  height: 6vmax;
+  border-radius: 3vmax;
+}
+#clouds .cloud:nth-child(4n+3)::before {
+  width: 12vmax;
+  height: 12vmax;
+  margin-left: 3vmax;
+  margin-top: -6vmax;
+}
+#clouds .cloud:nth-child(4n+3)::after {
+  width: 10vmax;
+  height: 10vmax;
+  margin-left: 13vmax;
+  margin-top: -10vmax;
+}
+
+#clouds .cloud:nth-child(4n+4) {
+  width: 12vmax;
+  height: 4vmax;
+  border-radius: 2vmax;
+}
+#clouds .cloud:nth-child(4n+4)::before {
+  width: 6vmax;
+  height: 6vmax;
+  margin-left: 1vmax;
+  margin-top: -4vmax;
+}
+#clouds .cloud:nth-child(4n+4)::after {
+  width: 5vmax;
+  height: 5vmax;
+  margin-left: 6vmax;
+  margin-top: -4vmax;
+}
+
+/* clouds will be one of seven "random" speeds */
+#clouds .cloud:nth-child(7n+1) {
+  animation: cloud_drift 44s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+2) {
+  animation: cloud_drift_2 40s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+3) {
+  animation: cloud_drift 36s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+4) {
+  animation: cloud_drift_2 32s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+5) {
+  animation: cloud_drift 28s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+6) {
+  animation: cloud_drift_2 24s linear;
+  animation-iteration-count: infinite;
+}
+
+#clouds .cloud:nth-child(7n+7) {
+  animation: cloud_drift 20s linear;
+  animation-iteration-count: infinite;
+}
+
+/* cloud animations will have one of three "random" delays */
+#clouds .cloud:nth-child(3n+1) {
+  animation-delay: 0s;
+}
+
+#clouds .cloud:nth-child(3n+2) {
+  animation-delay: 9s;
+}
+
+#clouds .cloud:nth-child(3n+3) {
+  animation-delay: 18s;
+}
+
+/* cloud paths will be at one of five "random" heights */
+#clouds .cloud:nth-child(5n+1) {
+  top: 24%;
+}
+
+#clouds .cloud:nth-child(5n+2) {
+  top: 33%;
+}
+
+#clouds .cloud:nth-child(5n+3) {
+  top: 42%;
+}
+
+#clouds .cloud:nth-child(5n+4) {
+  top: 51%;
+}
+
+#clouds .cloud:nth-child(5n+5) {
+  top: 60%;
+}
+</style>
+</head>
+<body>
+    
+<div id="sun"></div>
+<div id="clouds">
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+</div>
+</body>
+</html>
