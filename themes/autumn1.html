@@ -1,0 +1,265 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="script.js"></script>
+      <title>Autumn</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* lets try */
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#333, #000);
+}
+
+.set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.set div {
+    position: absolute;
+    display: block;
+}
+
+.set div img {
+    width: 150px;
+    -webkit-animation: fadeinout 10s linear forwards;
+    animation: fadeinout 10s linear forwards;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeinout {
+    20% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    20% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+
+
+/* Setting the elemets position */
+
+.set div:nth-child(1) {
+    left: 00%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7s;
+}
+
+.set div:nth-child(2) {
+    left: 15%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(3) {
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.set div:nth-child(4) {
+    left: 40%;
+    animation: animate 15s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(5) {
+    left: 30%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+}
+
+.set div:nth-child(6) {
+    left: 55%;
+    animation: animate 9s linear infinite;
+    animation-delay: -7s;
+}
+
+.set div:nth-child(7) {
+    left: 85%;
+    animation: animate 10s linear infinite;
+}
+
+.set div:nth-child(8) {
+    left: 70%;
+    animation: animate 22s linear infinite;
+    animation-delay: -5s;
+}
+
+.set div:nth-child(9) {
+    left: 75%;
+    animation: animate 14s linear infinite;
+    animation-delay: -8s;
+}
+
+
+/* Animation of falling down */
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(135deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+
+/* Now the closest set of elements */
+
+.set2 {
+    transform: scale(2) rotateY(180deg) translateX(-10px);
+    filter: blur(2px);
+}
+
+
+/* Now the furthest set of elements */
+
+.set3 {
+    transform: scale(0.8) rotateX(180deg) translateX(+10px);
+    filter: blur(4px);
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+  </head>
+  
+  <body onload="changeSeason()">
+    <section>
+          <h2>Autumn is here!</h2>
+          <div class="set set1">
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+          </div>
+          <div class="set set2">
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+          </div>
+          <div class="set set3">
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_1.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_2.png" alt=""></div>
+              <div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season1_3.png" alt=""></div>
+          </div>
+      </section>
+      <script>
+          /*
+ * Seasons Falling
+ * Ramon Morcillo @reymon359
+ * ramonmorcillo.com
+ */
+
+let seasonIndex = (Math.floor(Math.random() * 4) + 1); // The season we will start. It will be random
+
+function changeSeason() {
+    let html = '';
+    // I will build the html here
+
+    html += `<section><h2>Seasons Falling</h2>`;
+
+    for (let containerIndex = 1; containerIndex < 4; containerIndex++) {
+        // Now I make 3 set containers
+        html += `<div class="set set${containerIndex}">`;
+
+        // now 3 groups of 3 images each
+        for (let imgGroupIndex = 1; imgGroupIndex < 4; imgGroupIndex++) { // The loop for groups
+
+            for (let imgIndex = 1; imgIndex < 4; imgIndex++) { // The loop for the images
+
+                html += `<div><img src="https://raw.githubusercontent.com/reymon359/web-experiments/master/Seasons%20Falling/season${seasonIndex}_${imgIndex}.png" alt=""></div>`;
+
+            }
+        }
+
+        html += `</div>`;
+    }
+
+    html += `<a href="https://ramonmorcillo.com" >Ramon Morcillo @reymon359</a>`;
+
+    html += `</section>`;
+    document.getElementsByTagName('body')[0].innerHTML = html;
+
+    // Increasing the season number
+    seasonIndex = (seasonIndex === 4) ? 1 : seasonIndex + 1;
+
+    // Changing season in 10 sec
+    setTimeout(() => { changeSeason(); }, 10000);
+}
+      </script> 
+      
+  <script src="https://cdn.jsdelivr.net/gh/reymon359/web-experiments/Social%20Signature/socialsignature.min.js" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
