@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Align-items</title>
+<style> 
+#test1, #test2, #test3, #test4, #test5, #test6 {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black; 
+  display: flex;
+}
+#test1{
+  align-items: center;
+  }
+#test2{
+  align-items: top;
+  }
+#test3{
+  align-items: flex-end;
+  }
+#test4{
+  align-items: stretch;
+  }
+#test5{
+  align-items: flex-start;
+  }
+#test6{
+  align-items: baseline;
+  }
+
+#test1 div, #test2 div, #test3 div, #test4 div, #test5 div, #test6 div {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  align-items: top;
+}
+</style>
+</head>
+<body>
+
+<div id="test1">
+  <div style="background-color: #ffe9ec;min-height:50px;">Align-items: center</div>  
+</div>
+<div id="test2">
+  <div style="background-color: #ffd0d7;min-height:50px;">Align-items: top</div>
+</div>
+<div id="test3">
+  <div style="background-color: #ffb6c1;min-height:50px;">Align-items: flex-end</div> 
+  </div>
+<div id="test4">
+  <div style="background-color: #ff9dab;min-height:50px;">Align-items: stretch</div> 
+  </div>
+<div id="test5">
+  <div style="background-color: #ff8396;min-height:50px;">Align-items: flex-start</div> 
+  </div>
+<div id="test6">
+  <div style="background-color: #ff6a80;min-height:50px;">Align-items: baseline</div> 
+  </div>
+</body>
+</html>
