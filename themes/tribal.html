@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tribal</title>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
     *{
     margin: 0;
     padding: 0;
@@ -18,7 +19,6 @@ canvas{
     position: absolute;
     top: 0;
     left: 0;
-    color: #121c42;
 }
 </style>
 </head>
@@ -48,8 +48,9 @@ window.addEventListener('mousemove', function(event){
     mouse.y = event.y;
 })
 ctx.fillStyle = 'white';
-ctx.font = "4vmin sans-sarif";
+ctx.font = "4vmin 'Overpass', sans-serif";
 ctx.fillText("Tribal Agency",0,30);
+ctx.fillStyle = "#121c42";
 const textCoordinates = ctx.getImageData(0,0,600,400); //height and width of canvas
 
 // blueprint to create particles
