@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-wrap</title>
+    <style> 
+        #main {
+          width: 200px;
+          height: 200px;
+          border: 1px solid #c3c3c3;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        #main1 div {
+          width: 30px;
+          height: 30px;
+        }
+        #main2 div {
+          width: 60px;
+          height: 60px;
+        }
+        #main3 div {
+          width: 100px;
+          height: 100px;
+        }
+        </style>    
+</head>
+<body>
+    <h1>Flex-Wrap</h1>
+    <h2>Width & height: 30px</h2>
+    <div id="main main1">
+        <div style="background-color:rgb(214, 80, 255);">A</div>
+        <div style="background-color:rgb(252, 36, 201);">B</div>
+        <div style="background-color:rgb(253, 224, 254);">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:rgb(123, 80, 124);">E</div>
+        <div style="background-color:rgb(164, 108, 161);">F</div>
+      </div>
+      <h2>Width & height: 60px</h2>
+      <div id="main main2">
+        <div style="background-color:rgb(214, 80, 255);">A</div>
+        <div style="background-color:rgb(252, 36, 201);">B</div>
+        <div style="background-color:rgb(253, 224, 254);">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:rgb(123, 80, 124);">E</div>
+        <div style="background-color:rgb(164, 108, 161);">F</div>
+      </div>
+      <h2>Width & height: 100px</h2>
+      <div id="main main3">
+        <div style="background-color:rgb(214, 80, 255);">A</div>
+        <div style="background-color:rgb(252, 36, 201);">B</div>
+        <div style="background-color:rgb(253, 224, 254);">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:rgb(123, 80, 124);">E</div>
+        <div style="background-color:rgb(164, 108, 161);">F</div>
+      </div>
+</body>
+</html>
