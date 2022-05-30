@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Traveller 's Blog</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+}
+.left-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 68%;
+    margin-right: 2% ;
+}
+.right-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.blog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-blog , .previous-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.recent-blog img , .previous-blog img{
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+    margin: 20px;
+}
+
+.recent-blog img{
+    margin-left: 0;
+}
+
+.previous-blog img{
+    margin-right: 0;
+}
+
+/* card */
+.my-container{
+    background: #fff;
+    border-radius: 5px;
+    color: #6f6f6f;
+    width: 350px;
+    text-align: center;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+}
+.profile{
+    background: url(https://cdn.pixabay.com/photo/2018/09/16/22/08/software-3682509_1280.jpg);
+    height: 160px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.profile-img{
+    height: 120px;
+    width: 120px;
+    border-radius: 150px;
+    margin: 93px 0 0 -175px;
+    padding: 7px;
+    background: #292343;
+}
+.profile-name{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 27px 0 0 120px;
+}
+.about{
+    margin-top: 15px;
+    line-height: 21px;
+}
+button{
+    margin-left: 10px 0 40px 0;
+}
+.msg-btn, .follow-btn{
+    background: #091353;
+    padding: 10px 25px;
+    color: #dbdbdb;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
+    border: none;
+}
+.follow-btn{
+    margin-left: 10px;
+    background: transparent;
+    color: #707070;
+}
+.follow-btn:hover{
+    color: #231e39;
+    background: #e3e3e3;
+    transition: .5s;
+}
+.my-container i{
+    margin-top: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.my-container i:hover{
+    color: #e3e3e3;
+}
+
+@media (max-width : 800px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-container{
+        width: 100%;
+    }
+    .right-container{
+        width: 100%;
+    }
+    .my-container{
+        width: 100%;
+    }
+    .recent-blog img, .previous-blog img{
+        margin-left: 20px;
+    }
+    .my-container{
+        margin-bottom: 20px;
+    }
+
+    
+}
+</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-lg">
+          <a class="navbar-brand pl-5 fs-3 fw-bold" href="#" style="color:#707070;">Traveller 's Blog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-5 pr-5" >
+              <li class="nav-item mr-5">
+                <a class="nav-link active fs-4 fw-bold" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item mr-5">
+                <a class="nav-link fs-4 fw-bold" href="#">Link</a>
+              </li>
+             
+             </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main container mt-4" >
+      <div class="left-container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2015/07/29/00/08/photographer-865295_1280.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="blog">
+            <div class="recent-blog">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/06/20/blonde-1867768_1280.jpg" alt="">
+            </div>
+            <div class="previous-blog">
+                <img src="https://cdn.pixabay.com/photo/2016/01/19/17/47/hiker-1149898_1280.jpg" alt="">
+      
+            </div>
+          </div>
+      </div>
+
+      
+      <div class="right-container">
+            <div class="my-container">
+                <div class="profile">
+                    <img src="https://cdn.pixabay.com/photo/2018/09/12/12/26/photograph-3672053_1280.jpg" class="profile-img">
+                </div>
+                <div class="profile-name"> Traveller Kim </div>
+                <p class="about">Traveller<br> Travel with me</p>
+                <button class="msg-btn">Message</button>
+                <button class="follow-btn">Following</button>
+                <div>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-github"></i>
+                </div>
+            </div>
+        </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
