@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Accordion</title>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 40px;
+}
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px;
+}
+.accordian{
+    width: 400px;
+}
+.accordian .box{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordian .box .label{
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(45deg,#1cfdea,#4959eb);
+    color: #fff;
+    cursor: pointer;
+}
+.accordian .box .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.accordian .box.active .label::before{
+    content: '-';
+}
+.accordian .box .content{
+    position: relative;
+    background: #ff7300;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    border-radius: 5px;
+    color: #fff;
+}   
+.accordian .box.active .content{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-box{
+    position: relative;
+    width: 100%;
+}
+.label2{
+    width: 400px;
+    position: relative;
+    padding: 10px;
+    background: #4a1aa3;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #38082e;
+}
+#con1{
+    display: flex;
+}
+#con2{
+    display: none;
+}
+#optionA{
+    display: none;
+}
+#optionB{
+    display: none;
+}
+#optionC{
+    display: none;
+}
+#optionD{
+    display: none;
+}
+#optionE{
+    display: none;
+}
+#optionF{
+    display: none;
+}
+#optionG{
+    display: none;
+}
+#optionH{
+    display: none;
+}
+#optionI{
+    display: none;
+}
+.container2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 40px;
+    display: none;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background: rgb(212, 212, 212);
+}
+</style>
+</head>
+<body>
+<div class="container" id="con1">
+    <div class="title">Select Any One</div>
+<div class="accordian">
+    <div class="box">
+        <div class="label">lab one</div>
+        <div class="content">
+            <div class="inner-box">
+                <div class="label2" id="one">Inner lab one</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="two">Inner lab two</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="three">Inner lab three</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="label">lab Two</div>
+        <div class="content">
+            <div class="inner-box">
+                <div class="label2" id="sone">Inner lab one</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="stwo">Inner lab two</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="sthree">Inner lab three</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="label">lab Three</div>
+        <div class="content">
+            <div class="inner-box">
+                <div class="label2" id="yone">Inner lab one</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="ytwo">Inner lab two</div>
+            </div>
+            <div class="inner-box">
+                <div class="label2" id="ythree">Inner lab three</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container2" id="con2">
+    <div class="close" id="back">X</div>
+    <div class="title">Step 2</div>
+    <div id="optionA">
+        <div class="label2">Option A</div>
+        <div class="label2">Option A</div>
+    </div>
+    <div id="optionB">
+        <div class="label2">Option B</div>
+        <div class="label2">Option B</div>
+    </div>
+    <div id="optionC">
+        <div class="label2">Option C</div>
+        <div class="label2">Option C</div>
+    </div> 
+    <div id="optionD">
+        <div class="label2">Option2 A</div>
+        <div class="label2">Option2 A</div>
+    </div>
+    <div id="optionE">
+        <div class="label2">Option2 B</div>
+        <div class="label2">Option2 B</div>
+    </div>
+    <div id="optionF">
+        <div class="label2">Option2 C</div>
+        <div class="label2">Option2 C</div>
+    </div> 
+    <div id="optionG">
+        <div class="label2">Option3 A</div>
+        <div class="label2">Option3 A</div>
+    </div>
+    <div id="optionH">
+        <div class="label2">Option3 B</div>
+        <div class="label2">Option3 B</div>
+    </div>
+    <div id="optionI">
+        <div class="label2">Option3 C</div>
+        <div class="label2">Option3 C</div>
+    </div> 
+</div>
+<script>
+var one = document.getElementById("one");
+var two = document.getElementById("two");
+var three = document.getElementById("three");
+var sone = document.getElementById("sone");
+var stwo = document.getElementById("stwo");
+var sthree = document.getElementById("sthree");
+var yone = document.getElementById("yone");
+var ytwo = document.getElementById("ytwo");
+var ythree = document.getElementById("ythree");
+var optionA = document.getElementById("optionA");
+var optionB = document.getElementById("optionB");
+var optionC = document.getElementById("optionC");
+var con1 = document.getElementById("con1");
+var con2 = document.getElementById("con2");
+var back = document.getElementById("back");
+const accordian = document.getElementsByClassName('box');
+for(i=0;i<accordian.length;i++){
+    accordian[i].addEventListener('click',function(){
+        this.classList.toggle('active')
+    })
+}
+one.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionA.style.display = 'block';
+}
+two.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionB.style.display = 'block';
+}
+three.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionC.style.display = 'block';
+}
+sone.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionD.style.display = 'block';
+}
+stwo.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionE.style.display = 'block';
+}
+sthree.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionF.style.display = 'block';
+}
+yone.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionG.style.display = 'block';
+}
+ytwo.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionH.style.display = 'block';
+}
+ythree.onclick = function(){
+    con1.style.display = 'none';
+    con2.style.display = 'flex';
+    optionI.style.display = 'block';
+}
+back.onclick = function(){
+    con1.style.display = 'flex';
+    con2.style.display = 'none';
+    optionA.style.display = 'none';
+    optionB.style.display = 'none';
+    optionC.style.display = 'none';
+    optionD.style.display = 'none';
+    optionE.style.display = 'none';
+    optionF.style.display = 'none';
+    optionG.style.display = 'none';
+    optionH.style.display = 'none';
+    optionI.style.display = 'none';
+}
+</script>
+</body>
+</html>
