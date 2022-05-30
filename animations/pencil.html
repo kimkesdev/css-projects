@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    background: #153365;
+}
+.stroke{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.stroke::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #153365;
+    animation: animate 5s linear infinite;
+}
+.stroke::after{
+    content: '\f040';
+    font-family: fontAwesome;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    height: 100%;
+    color: #08daff;
+    font-size: 50px;
+    transform: translateX(-2px);
+    animation: animate2 5s linear infinite;
+}
+</style>    
+</head>
+<body>
+<div class="stroke"></div>
+    
+</body>
+</html>
