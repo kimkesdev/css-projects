@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waving Hand</title>
+<style>
+    /* Standard syntax */
+@keyframes swipe {
+
+
+0% {
+    margin:0;
+    transform: rotate(0deg);
+}
+
+100% {
+    margin-right:20px;
+    transform: rotate(-5deg);
+}
+
+
+
+}
+
+.handswipe {
+animation:         swipe .8s alternate infinite; /* IE 10+, Fx 29+ */
+animation-timing-function: ease;
+position: absolute;
+bottom: 95px;
+width: 100px;
+right: 50%;
+top:50%;
+}
+</style>    
+</head>
+<body>
+    <div class="handswipe">
+        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/259136-200.png" />
+      </div>
+</body>
+</html>
