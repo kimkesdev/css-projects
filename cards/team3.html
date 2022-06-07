@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+<style>
+    *,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right, #ff0080, #ff8c00, #40e0d0);
+}
+.profiles {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.profiles {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 2em;
+  justify-content: space-between;
+}
+a {
+  transition: 0.3s all ease-in;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+a:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+a div {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  font: 400 12px/1 arial;
+  opacity: 0;
+  transition: 0.3s all ease-in;
+  color: #fff;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+span {
+  color: #ccc;
+}
+
+a:hover div {
+  opacity: 1;
+  height: 50px;
+  bottom: 3px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+img {
+  height: 250px;
+  max-width: 100%;
+  transition: 0.3s all ease-in;
+}
+
+a:first-child img {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+a:last-child img {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+a:hover img {
+  border-radius: 4px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 767px) {
+  .profiles {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .profiles a {
+    width: 50%;
+  }
+}
+
+</style>    
+</head>
+<body>
+    <section class="profiles">
+        <a href="#"><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+      
+          <div>
+            <h3>Devansh Jaiteley</h3>
+            <span>Software Developer</span>
+          </div>
+        </a>
+      
+        <a href="#"><img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+      
+          <div>
+            <h3>Ramesh Bhatnagar</h3>
+            <span>QA</span>
+          </div>
+        </a>
+      
+        <a href="#"><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+      
+          <div>
+            <h3>Sai Jhadav</h3>
+            <span>HR</span>
+          </div>
+        </a>
+      
+        <a href="#"><img src="https://images.pexels.com/photos/8638757/pexels-photo-8638757.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+      
+          <div>
+            <h3>Shaurya Rao</h3>
+            <span>VP</span>
+          </div>
+        </a>
+      
+        <a href="#"><img src="https://images.pexels.com/photos/6256327/pexels-photo-6256327.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+          <div>
+            <h3>Aradhya Trivedi</h3>
+            <span>Manager</span>
+          </div>
+        </a>
+      
+        <a href="#"><img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+          <div>
+            <h3>Kirti Patil</h3>
+            <span>DevOps</span>
+          </div>
+        </a>
+      </section>
+</body>
+</html>
