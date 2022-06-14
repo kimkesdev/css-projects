@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients - sass lists</title>
+<style>
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.C {
+  line-height: 1;
+  white-space: nowrap;
+  border-left: 1px solid #ccc;
+}
+.C + .C {
+  padding-top: 1rem;
+}
+.C:before {
+  content: "";
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: unitSize(0.5);
+  margin-left: -0.7rem;
+  vertical-align: bottom;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 0 0 2.5px white;
+}
+
+.Gradient {
+  font-family: monospace;
+  letter-spacing: 0.01em;
+  display: flex;
+  margin: 1rem;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  overflow: hidden;
+}
+.Gradient:before {
+  content: "";
+  display: block;
+  width: 14rem;
+}
+
+.Gradient-details {
+  padding: unitSize(1.5) unitSize(2.5);
+}
+
+.Gradient--1:before {
+  background: linear-gradient(to right, #303395 0%, #27f0f0 100%);
+}
+.Gradient--1 .C--1:before {
+  background-color: #303395;
+}
+.Gradient--1 .C--1:after {
+  content: "#303395";
+}
+.Gradient--1 .C--2:before {
+  background-color: #27f0f0;
+}
+.Gradient--1 .C--2:after {
+  content: "#27f0f0";
+}
+
+.Gradient--2:before {
+  background: linear-gradient(to right, #f48731 0%, #d8e015 100%);
+}
+.Gradient--2 .C--1:before {
+  background-color: #f48731;
+}
+.Gradient--2 .C--1:after {
+  content: "#f48731";
+}
+.Gradient--2 .C--2:before {
+  background-color: #d8e015;
+}
+.Gradient--2 .C--2:after {
+  content: "#d8e015";
+}
+
+.Gradient--3:before {
+  background: linear-gradient(to right, #f298e7 0%, #a5f9f9 100%);
+}
+.Gradient--3 .C--1:before {
+  background-color: #f298e7;
+}
+.Gradient--3 .C--1:after {
+  content: "#f298e7";
+}
+.Gradient--3 .C--2:before {
+  background-color: #a5f9f9;
+}
+.Gradient--3 .C--2:after {
+  content: "#a5f9f9";
+}
+
+.Gradient--4:before {
+  background: linear-gradient(to right, #d20b54 0%, #ffb894 100%);
+}
+.Gradient--4 .C--1:before {
+  background-color: #d20b54;
+}
+.Gradient--4 .C--1:after {
+  content: "#d20b54";
+}
+.Gradient--4 .C--2:before {
+  background-color: #ffb894;
+}
+.Gradient--4 .C--2:after {
+  content: "#ffb894";
+}
+
+.Gradient--5:before {
+  background: linear-gradient(to right, #2d266f 0%, #7c2289 100%);
+}
+.Gradient--5 .C--1:before {
+  background-color: #2d266f;
+}
+.Gradient--5 .C--1:after {
+  content: "#2d266f";
+}
+.Gradient--5 .C--2:before {
+  background-color: #7c2289;
+}
+.Gradient--5 .C--2:after {
+  content: "#7c2289";
+}
+
+.Gradient--6:before {
+  background: linear-gradient(to right, #d481ff 0%, #05f1e1 100%);
+}
+.Gradient--6 .C--1:before {
+  background-color: #d481ff;
+}
+.Gradient--6 .C--1:after {
+  content: "#d481ff";
+}
+.Gradient--6 .C--2:before {
+  background-color: #05f1e1;
+}
+.Gradient--6 .C--2:after {
+  content: "#05f1e1";
+}
+
+.Gradient--7:before {
+  background: linear-gradient(to right, #05974a 0%, #f2e51e 100%);
+}
+.Gradient--7 .C--1:before {
+  background-color: #05974a;
+}
+.Gradient--7 .C--1:after {
+  content: "#05974a";
+}
+.Gradient--7 .C--2:before {
+  background-color: #f2e51e;
+}
+.Gradient--7 .C--2:after {
+  content: "#f2e51e";
+}
+
+.Gradient--8:before {
+  background: linear-gradient(to right, #009900 0%, #ffff92 100%);
+}
+.Gradient--8 .C--1:before {
+  background-color: #009900;
+}
+.Gradient--8 .C--1:after {
+  content: "#009900";
+}
+.Gradient--8 .C--2:before {
+  background-color: #ffff92;
+}
+.Gradient--8 .C--2:after {
+  content: "#ffff92";
+}
+
+.Gradient--9:before {
+  background: linear-gradient(to right, #ed4443 0%, #eabc85 100%);
+}
+.Gradient--9 .C--1:before {
+  background-color: #ed4443;
+}
+.Gradient--9 .C--1:after {
+  content: "#ed4443";
+}
+.Gradient--9 .C--2:before {
+  background-color: #eabc85;
+}
+.Gradient--9 .C--2:after {
+  content: "#eabc85";
+}
+
+.Gradient--10:before {
+  background: linear-gradient(to right, #61258a 0%, #fd0f77 100%);
+}
+.Gradient--10 .C--1:before {
+  background-color: #61258a;
+}
+.Gradient--10 .C--1:after {
+  content: "#61258a";
+}
+.Gradient--10 .C--2:before {
+  background-color: #fd0f77;
+}
+.Gradient--10 .C--2:after {
+  content: "#fd0f77";
+}
+
+.Gradient--11:before {
+  background: linear-gradient(to right, #ab64f6 0%, #61dbf7 100%);
+}
+.Gradient--11 .C--1:before {
+  background-color: #ab64f6;
+}
+.Gradient--11 .C--1:after {
+  content: "#ab64f6";
+}
+.Gradient--11 .C--2:before {
+  background-color: #61dbf7;
+}
+.Gradient--11 .C--2:after {
+  content: "#61dbf7";
+}
+
+.Gradient--12:before {
+  background: linear-gradient(to right, #421057 0%, #f45509 100%);
+}
+.Gradient--12 .C--1:before {
+  background-color: #421057;
+}
+.Gradient--12 .C--1:after {
+  content: "#421057";
+}
+.Gradient--12 .C--2:before {
+  background-color: #f45509;
+}
+.Gradient--12 .C--2:after {
+  content: "#f45509";
+}
+
+.Gradient--13:before {
+  background: linear-gradient(to right, #eb121a 0%, #faeb18 100%);
+}
+.Gradient--13 .C--1:before {
+  background-color: #eb121a;
+}
+.Gradient--13 .C--1:after {
+  content: "#eb121a";
+}
+.Gradient--13 .C--2:before {
+  background-color: #faeb18;
+}
+.Gradient--13 .C--2:after {
+  content: "#faeb18";
+}
+
+.Gradient--14:before {
+  background: linear-gradient(to right, #7a7a7a 0%, #e3e0e0 100%);
+}
+.Gradient--14 .C--1:before {
+  background-color: #7a7a7a;
+}
+.Gradient--14 .C--1:after {
+  content: "#7a7a7a";
+}
+.Gradient--14 .C--2:before {
+  background-color: #e3e0e0;
+}
+.Gradient--14 .C--2:after {
+  content: "#e3e0e0";
+}
+
+.Gradient--15:before {
+  background: linear-gradient(to right, #313131 0%, #534d4d 100%);
+}
+.Gradient--15 .C--1:before {
+  background-color: #313131;
+}
+.Gradient--15 .C--1:after {
+  content: "#313131";
+}
+.Gradient--15 .C--2:before {
+  background-color: #534d4d;
+}
+.Gradient--15 .C--2:after {
+  content: "#534d4d";
+}
+
+.Gradient--16:before {
+  background: linear-gradient(to right, #04a5c1 0%, #f9f981 100%);
+}
+.Gradient--16 .C--1:before {
+  background-color: #04a5c1;
+}
+.Gradient--16 .C--1:after {
+  content: "#04a5c1";
+}
+.Gradient--16 .C--2:before {
+  background-color: #f9f981;
+}
+.Gradient--16 .C--2:after {
+  content: "#f9f981";
+}
+
+.Gradient--17:before {
+  background: linear-gradient(to right, #00f298 0%, #07f7f7 100%);
+}
+.Gradient--17 .C--1:before {
+  background-color: #00f298;
+}
+.Gradient--17 .C--1:after {
+  content: "#00f298";
+}
+.Gradient--17 .C--2:before {
+  background-color: #07f7f7;
+}
+.Gradient--17 .C--2:after {
+  content: "#07f7f7";
+}
+
+.Gradient--18:before {
+  background: linear-gradient(to right, #cf396f 0%, #f7e28b 100%);
+}
+.Gradient--18 .C--1:before {
+  background-color: #cf396f;
+}
+.Gradient--18 .C--1:after {
+  content: "#cf396f";
+}
+.Gradient--18 .C--2:before {
+  background-color: #f7e28b;
+}
+.Gradient--18 .C--2:after {
+  content: "#f7e28b";
+}
+
+.Gradient--19:before {
+  background: linear-gradient(to right, #846ef4 0%, #f17674 100%);
+}
+.Gradient--19 .C--1:before {
+  background-color: #846ef4;
+}
+.Gradient--19 .C--1:after {
+  content: "#846ef4";
+}
+.Gradient--19 .C--2:before {
+  background-color: #f17674;
+}
+.Gradient--19 .C--2:after {
+  content: "#f17674";
+}
+
+.Gradient--20:before {
+  background: linear-gradient(to right, #90218c 0%, #009890 100%);
+}
+.Gradient--20 .C--1:before {
+  background-color: #90218c;
+}
+.Gradient--20 .C--1:after {
+  content: "#90218c";
+}
+.Gradient--20 .C--2:before {
+  background-color: #009890;
+}
+.Gradient--20 .C--2:after {
+  content: "#009890";
+}
+</style>    
+</head>
+<body>
+    
+<div class="Wrapper">
+    <div class="Gradient Gradient--1">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--2">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--3">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--4">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--5">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--6">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--7">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--8">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--9">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--10">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--11">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--12">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--13">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--14">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--15">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--16">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--17">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--18">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--19">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+    <div class="Gradient Gradient--20">
+      <div class="Gradient-details">
+        <div class="C C--1"></div>
+        <div class="C C--2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
