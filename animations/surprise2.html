@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise 2</title>
+<style>
+    @charset "UTF-8";
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>😀</text></svg>") 16 0, auto;
+  /*emojicursor.app*/
+}
+
+body {
+  background-color: white;
+  font-size: 2rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+
+button {
+  background-color: inherit;
+  border: 0;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>😀</text></svg>") 16 0, auto;
+  /*emojicursor.app*/
+  font-weight: bold;
+  padding: 2rem;
+  text-transform: uppercase;
+  transition: 0.4s ease all, 0s box-shadow;
+}
+button.warn {
+  background-color: firebrick;
+  color: white;
+}
+button.warn:hover {
+  background-color: DarkRed;
+  transform: scale(1.2) rotate(2deg);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>😱</text></svg>") 16 0, auto;
+  /*emojicursor.app*/
+}
+button.popped {
+  box-shadow: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.emoji {
+  display: inline-block;
+}
+</style>    
+</head>
+<body>
+    <div id="✨" />
+<script>
+    // prettier-ignore
+const emojis = ["✨", "😂", "😝", "😁", "😱", "👉", "🙌", "🍻", "🔥", "🌈", "☀", "🎈", "🌹", "💄", "🎀", "⚽", "🎾", "🏁", "😡", "👿", "🐻", "🐶", "🐬", "🐟", "🍀", "👀", "🚗", "🍎", "💝", "💙", "👌", "❤", "😍", "😉", "😓", "😳", "💪", "💩", "🍸", "🔑", "💖", "🌟", "🎉", "🌺", "🎶", "👠", "🏈", "⚾", "🏆", "👽", "💀", "🐵", "🐮", "🐩", "🐎", "💣", "👃", "👂", "🍓", "💘", "💜", "👊", "💋", "😘", "😜", "😵", "🙏", "👋", "🚽", "💃", "💎", "🚀", "🌙", "🎁", "⛄", "🌊", "⛵", "🏀", "🎱", "💰", "👶", "👸", "🐰", "🐷", "🐍", "🐫", "🔫", "👄", "🚲", "🍉", "💛", "💚"];
+
+
+const random = max => Math.floor(Math.random() * max);
+
+const randomEmoji = () => emojis[random(emojis.length)];
+
+const randomRotation = (max) =>
+`rotate(${Math.random() < 0.5 ? "-" : ""}${Math.floor(
+Math.random() * max)
+}deg)`;
+
+class Emoji extends React.Component {
+  componentDidMount() {
+    const { clientWidth, clientHeight } = document.documentElement;
+
+    const element = document.getElementById(`emoji-${this.props.i}`);
+    const initialPosition = element.getBoundingClientRect();
+
+    const randomPosition = () => {
+      const randomPosition = axis => {
+        const direction = Math.random() < 0.5 ? -1 : 1;
+        const negative = direction === -1;
+        const edgePadding = 50;
+        const elementEdge = negative ?
+        axis === "x" ?
+        "left" :
+        "top" :
+        axis === "x" ?
+        "right" :
+        "bottom";
+
+        const edgePosition = initialPosition[elementEdge];
+
+        const getClientDimension = () =>
+        elementEdge === "right" ? clientWidth : clientHeight;
+
+        const availableSpace = negative ?
+        edgePosition - edgePadding :
+        getClientDimension(elementEdge) - edgePosition - edgePadding;
+
+        return direction * Math.floor(Math.random() * availableSpace);
+      };
+
+      return {
+        x: randomPosition("x"),
+        y: randomPosition("y") };
+
+    };
+
+    const finalPosition = randomPosition();
+    const finalRotation = random(360);
+    const finalScale = random(3) + 1;
+    const easeOut = progress => Math.pow(--progress, 5) + 1;
+
+    const time = {
+      start: performance.now(),
+      total: 2000 };
+
+
+    const tick = now => {
+      time.elapsed = now - time.start;
+      const progress = Math.min(time.elapsed / time.total, 1);
+      const easing = easeOut(progress);
+
+      element.style.transform = `
+        translateX(${easing * finalPosition.x}px)
+        translateY(${easing * finalPosition.y}px)
+        rotate(${easing * finalRotation}deg)
+        scale(${easing * finalScale})
+      `;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  }
+
+  render() {
+    const { children, i } = this.props;
+    return /*#__PURE__*/(
+      React.createElement("span", { id: `emoji-${i}`, className: "emoji" },
+      children));
+
+
+  }}
+
+
+const Baloon = ({ children, pop }) => /*#__PURE__*/
+React.createElement(React.Fragment, null,
+pop ? children.map((emoji, i) => /*#__PURE__*/React.createElement(Emoji, { i: i }, emoji)) : children);
+
+
+
+const initialState = {
+  clicked: false,
+  content: "CLICK FOR SURPRISE".split(""),
+  pop: false,
+  state: {} };
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = initialState;
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick({ target }) {
+    this.setState({ clicked: true });
+    const { clicked, content, pop } = this.state;
+
+    if (!clicked) {
+      content.forEach((letter, i, arr) => {
+        const timeout = 80 * i;
+        const isLast = i + 1 === arr.length;
+
+        setTimeout(() => {
+          const { content } = this.state;
+          content[i] = randomEmoji();
+
+          this.setState({
+            content,
+            pop: isLast,
+            style: {
+              fontSize: `${1 + (i + 1) * 0.05}rem`,
+              transform: isLast ? "rotate(0)" : randomRotation(10) } });
+
+
+        }, timeout);
+      });
+    }
+
+    if (pop) {
+      this.setState({
+        ...initialState,
+        content: `${randomEmoji()} CLICK IT AGAIN ${randomEmoji()}`.split(""),
+        style: {} });
+
+    }
+  }
+
+  render() {
+    const { content, pop, style } = this.state;
+
+    return /*#__PURE__*/(
+      React.createElement("button", {
+        className: `
+          ${!this.state.clicked ? "warn" : ""}
+          ${this.state.pop ? "popped" : ""}
+        `,
+        onClick: e => this.handleClick(e),
+        style: style }, /*#__PURE__*/
+
+      React.createElement(Baloon, { pop: pop }, content)));
+
+
+  }}
+
+
+ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById("✨"));
+</script>    
+</body>
+</html>
