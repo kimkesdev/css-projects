@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+</style>
+</head>
+<body>
+    <h1>Offset classes</h1>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+      </div>
+      <h2>Responsive breakpoints</h2>
+      <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+      </div>
+      <h2>Margin utilities</h2>
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+        <div class="col-auto">.col-auto</div>
+      </div>
+      <h2>Nesting</h2>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Three Equal Columns</h2>
+      <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+      </div>
+      <h2>Three Unequal Columns</h2>
+      <div class="row">
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-3">.col-sm-3</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-8">.col-sm-8</div>
+      </div>
+      <h2>No gutters</h2>
+      <div class="row row-no-gutters">
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-3">.col-sm-3</div>
+      </div>
+      <h2>Two Columns With Two Nested Columns</h2>
+      <div class="row">
+        <div class="col-sm-8">
+          .col-sm-8
+          <div class="row">
+            <div class="col-sm-6">.col-sm-6</div>
+            <div class="col-sm-6">.col-sm-6</div>
+          </div>
+        </div>
+        <div class="col-sm-4">.col-sm-4</div>
+      </div>
+      <h2>Mixed: Mobile And Desktop</h2>
+      <p>The Bootstrap grid system has four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). The classes can be combined to create more dynamic and flexible layouts.</p>
+      <div class="row">
+        <div class="col-xs-9 col-md-7">.col-xs-9 .col-md-7</div>
+        <div class="col-xs-3 col-md-5">.col-xs-3 .col-md-5</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-6 col-md-10">.col-xs-6 .col-md-10</div>
+        <div class="col-xs-6 col-md-2">.col-xs-6 .col-md-2</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-7 col-sm-6 col-lg-8">.col-xs-7 .col-sm-6 .col-lg-8</div>
+        <div class="col-xs-5 col-sm-6 col-lg-4">.col-xs-5 .col-sm-6 .col-lg-4</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-6 col-sm-8 col-lg-10">.col-xs-6 .col-sm-8 .col-lg-10</div>
+        <div class="col-xs-6 col-sm-4 col-lg-2">.col-xs-6 .col-sm-4 .col-lg-2</div>
+      </div>
+      <h2>Clear Floats</h2>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+          Column 1
+          <br>
+          Resize the browser window to see the effect.
+        </div>
+        <div class="col-xs-6 col-sm-3">Column 2</div>
+        <!-- Add clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-3">Column 3</div>
+        <div class="col-xs-6 col-sm-3">Column 4</div>
+      </div>
+      <h2>Offsetting Columns</h2>
+      <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">
+      </div>
+      <h2>Push And Pull - Change Column Ordering</h2>
+      <div class="row">
+        <div class="col-sm-4 col-sm-push-8">.col-sm-4 .col-sm-push-8</div>
+        <div class="col-sm-8 col-sm-pull-4">.col-sm-8 .col-sm-pull-4</div>
+      </div>
+      <h2>Using Only Large</h2>
+      <div class="container-fluid">
+        <h1>Hello World!</h1>
+        <div class="row">
+          <div class="col-lg-6" style="background-color:yellow;">
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-lg-6" style="background-color:pink;">
+            <p>Sed ut perspiciatis...</p>
+          </div>
+        </div>
+      </div>
+      <h2>Using Only Medium</h2>
+      <div class="row">
+        <div class="col-md-6" style="background-color:yellow;">
+          <p>Lorem ipsum...</p>
+        </div>
+        <div class="col-md-6" style="background-color:pink;">
+          <p>Sed ut perspiciatis...</p>
+        </div>
+      </div>
+      <h2>Using Only Small</h2>
+      <div class="container-fluid">
+        <h1>Hello World!</h1>
+        <div class="row">
+          <div class="col-sm-4" style="background-color:yellow;">
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-sm-8" style="background-color:pink;">
+            <p>Sed ut perspiciatis...</p>
+          </div>
+        </div>
+      </div>
+      <h2>Stacked-to-horizontal</h2>
+      <div class="container">
+        <h1>Hello World!</h1>
+        <div class="row">
+          <div class="col-sm-6" style="background-color:yellow;">
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-sm-6" style="background-color:pink;">
+            <p>Sed ut perspiciatis...</p>
+          </div>
+        </div>
+      </div>
+      <h2>Fluid container</h2>
+      <div class="container-fluid">
+        <h1>Hello World!</h1>
+        <div class="row">
+          <div class="col-sm-6" style="background-color:yellow;">
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-sm-6" style="background-color:pink;">
+            <p>Sed ut perspiciatis...</p>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
