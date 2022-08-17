@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+<style>
+
+body {
+  background: #cfd7db;
+  width: 100%;
+}
+
+.camera_pt1 {
+  background-color: #ecf0f1;
+  border-radius: 57px;
+  bottom: 0;
+  box-shadow: 0 10px 0 #798b8f;
+  height: 256px;
+  left: 0; 
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 256px;
+  z-index: 1;
+}
+
+.camera_pt1:before {
+  background-color: #fb2a53;
+  box-shadow: 0 25px 0 #fcd126, 0 50px 0 #57d68d, 0 75px 0 #42a4e6;
+  content: "";
+  height: 25px;
+  position: absolute;
+  top: 82px;
+  width: 100%;
+  z-index: 1;
+}
+
+.camera_pt1:after {
+  background-color: #3498db;
+  border: 8px solid #d6e0e5;
+  border-radius: 50%;
+  content: "";
+  height: 158px;
+  left: 41px;
+  position: absolute;
+  top: 45px;
+  width: 158px;
+  z-index: 2;
+}
+
+.camera_pt2 {
+  border: 27px solid #1e71a7;
+  border-radius: 50%;
+  background-color: #213448;
+  position: absolute;
+  top: 72px;
+  left: 68px;
+  width: 64px;
+  height: 64px;
+  z-index: 3;
+}
+
+.camera_pt2:before {
+  background-color: #596776;
+  border-radius: 50%;
+  content: "";
+  height: 15px;
+  position: absolute;
+  right: 12px;
+  top: 15px;
+  width: 15px;
+  z-index: 4;
+}
+
+.camera_pt2:after {
+  background-color: #838d98;
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 6px;
+  z-index: 5;
+}
+</style>
+</head>
+<body>
+    <div class="camera_pt1">
+        <div class="camera_pt2"></div>
+      </div>
+</body>
+</html>
