@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imac</title>
+    <style>
+
+.body {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  -moz-position: relative;
+  -webkit-position: relative;
+  -ms-position: relative;
+  -o-position: relative;
+  top: 50px;
+  margin: auto;
+  display: block;
+}
+.body .circle {
+  width: 300px;
+  height: 300px;
+  background-color: #00b39f;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: block;
+}
+.body .body {
+  width: 220px;
+  height: 130px;
+  background-color: #1b252d;
+  position: relative;
+  -moz-position: relative;
+  -webkit-position: relative;
+  -ms-position: relative;
+  -o-position: relative;
+  border-radius: 8px 8px 0px 0px;
+  -webkit-border-radius: 8px 8px 0px 0px;
+  -ms-border-radius: 8px 8px 0px 0px;
+  -moz-border-radius: 8px 8px 0px 0px;
+  -o-border-radius: 8px 8px 0px 0px;
+  top: 60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 150;
+}
+.body .screen {
+  width: 200px;
+  height: 110px;
+  background-color: #eaeaea;
+}
+.body .screen:before {
+  content: "";
+  float: right;
+  width: 0px;
+  height: 0px;
+  border-bottom: 110px solid #E4E4E4;
+  border-left: 200px solid rgba(0, 0, 0, 0);
+}
+.body .bottom-alminiom {
+  width: 220px;
+  height: 24px;
+  background-color: #d1d1d1;
+  position: absolute;
+  -moz-position: absolute;
+  -webkit-position: absolute;
+  -ms-position: absolute;
+  left: 40px;
+  top: 190px;
+  border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -ms-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  z-index: 150;
+}
+.body .bottom-alminiom:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #848484;
+}
+
+.body .leg {
+  width: 50px;
+  height: 22px;
+  background-color: #919191;
+  position: absolute;
+  -moz-position: absolute;
+  -webkit-position: absolute;
+  -ms-position: absolute;
+  top: 214px;
+  left: 41.3%;
+  z-index: 150;
+}
+.body .leg .shape {
+  border-bottom: 13px solid #A9A5A5;
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  height: 0;
+  width: 50px;
+  box-shadow: 0px 4px #7E7878;
+  top: 15px;
+  position: absolute;
+  left: -5px;
+  z-index: 150;
+}
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="circle">
+         <div class="body">
+          <div class="screen"></div>
+         </div>
+         <div class="bottom-alminiom"></div>
+         <div class="leg"><div class="shape"></div></div>
+        </div>
+       </div>
+</body>
+</html>
