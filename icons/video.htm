@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+<style>
+    body {
+  background-color: #292a34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.absolute_centre{
+	margin: auto;
+
+	position: absolute;
+	top:0; left: 0; right: 0; bottom: 0;
+}
+
+
+section{
+	width: 135px;
+	height: 128px;
+	border-radius: 15px;
+
+	background-color: #3c3f67;
+	box-shadow: 0 0px 0px 5px #fbebd1, 0 5px 10px 7px rgba(31,32,44,1);
+	z-index: 100;
+
+}
+
+	.rec{
+		overflow: hidden;
+		border-radius: 15px 15px 0 0;
+		height: 35px;
+		z-index: 200;
+	}
+
+		.skew{
+			position: relative;
+			top: 0px;
+			left: 25px;
+
+			width: 18px;
+			height: 18px;
+			
+     -webkit-transform: skewX(35deg);
+        -moz-transform: skewX(35deg);
+         -ms-transform: skewX(35deg);
+          -o-transform: skewX(35deg);
+        
+  
+			box-shadow: 30px 0 0 0 #47afca, 60px 0 0 0 #47afca, 90px 0 0 0 #47afca ;
+			
+			background: #47afca;
+			z-index: 300;
+
+		}
+
+		.skew:after{
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 18px;
+
+			width: 14px;
+			height: 18px;
+			box-shadow: 30px 0 0 0 #fff, 60px 0 0 0 #fff, 90px 0 0 0 #fff;
+
+			background: #fff;
+			z-index: 300;
+
+		}
+
+		.clipping{
+			position: relative;
+			top: 0px;
+			left: 25px;
+
+			width: 18px;
+			height: 18px;
+			
+    -webkit-transform: skewX(-35deg);
+       -moz-transform: skewX(-35deg);
+        -ms-transform: skewX(-35deg);
+         -o-transform: skewX(-35deg);
+			
+  
+      box-shadow: 30px 0 0 0 #449695, 60px 0 0 0 #449695, 90px 0 0 0 #449695 ;
+			background: #449695;
+
+			z-index: 300;
+
+			
+		}
+
+		.clipping:after{
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 18px;
+
+			width: 14px;
+			height: 18px;
+			box-shadow: 30px 0 0 0 #fce6ca, 60px 0 0 0 #fce6ca, 90px 0 0 0 #fce6ca;
+			background: #fce6ca;
+
+			z-index: 300;
+
+		}
+
+		.trap{
+
+			position: relative;
+     	 	top: -61px; left: 0px;
+     	 	width: 10px;
+
+			border-top: 43px solid transparent;
+			border-left: 32px solid #f05151;
+			border-bottom: 35px solid #f05151;
+
+			z-index: 400;
+
+		}
+
+		.circle{
+			position: absolute;
+			width: 13px;
+			height: 13px;
+			top: 13px; left: 10px;
+			background: white;
+			border-radius: 50%;
+
+			z-index: 500;
+
+		}
+
+
+h1{
+
+	font-family: 'Condiment', cursive;
+	font-size: 2.5em;
+	font-weight: 400;
+	letter-spacing: 0em;
+	text-shadow: 0 1px 5px #1c1e47;
+	text-shadow: 0 1px 5px rgba(0,0,0,.7);
+
+	color: #f6fcfc;
+
+	position: absolute;
+	top: 20px; left: 30px;
+
+	-webkit-transform: rotate(-7deg);
+  	 -moz-transform: rotate(-7deg);
+  	  -ms-transform: rotate(-7deg);
+  	   -o-transform: rotate(-7deg);
+
+}
+
+.line{
+	position: absolute;
+	width: 60px;
+	height: 2px;
+	top: 92px; left: 51px;
+	background: #f6fcfc;
+	border-radius: 200px / 10px;
+
+	-webkit-transform: rotate(-8deg);
+     -moz-transform: rotate(-8deg);
+      -ms-transform: rotate(-8deg);
+       -o-transform: rotate(-8deg);
+  
+  
+  
+	box-shadow: 0 1px 5px rgba(0,0,0,.7);
+  
+	z-index: 500;
+}
+
+</style>    
+</head>
+<body>
+ 
+<body>
+	<section class="absolute_centre">
+			<div class="rec">
+				<div class="skew"></div>
+				<div class="clipping"></div>
+				<div class="trap"></div>
+				
+			</div>		
+			<div class="circle"></div>
+			<h1>Video</h1>
+			<div class="line"></div>
+
+	</section>
+</body>   
+</body>
+</html>
