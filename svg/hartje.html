@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @keyframes pulse {
+  100% { transform: scale3d(1.2,1.2,1.2)}
+}
+
+svg {
+  max-width: 100vmin;
+  max-height: 100vmin;
+  display: block;
+  margin: 0 auto;
+  animation: pulse 1s ease-in-out alternate infinite
+}
+</style>
+</head>
+<body>
+    <svg viewBox="0 0 150 125">
+        <path d="m20 75a 25 25 0 1 1 50 -50a 25 25 0 1 1 50,50l-50 50l-50 -50" fill="#f69"/>
+      </svg>
+</body>
+</html>
