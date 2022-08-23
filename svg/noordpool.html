@@ -5,41 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    @import url("https://fonts.googleapis.com/css?family=Unica+One");
-
+@import url("https://fonts.googleapis.com/css?family=Unica+One");
 /*Colors*/
-
-$beam: #e9fef6;
-$sky-dark: hsl(200, 40%, 60%);
-$sky-bright: hsl(190, 80%, 90%);
-$ocean-deep: #306b98;
-$ocean-shallow: #9fc2ca;
-$ocean-surface: hsl(190, 60%, 80%);
-
 /*Gradients and Fills */
-
 .sky-bright {
-  stop-color: $sky-bright;
+  stop-color: #d1f3fa;
 }
 
 .sky-dark {
-  stop-color: $sky-dark;
+  stop-color: #70a7c2;
 }
 
 .beam-gradient {
-  stop-color: $beam;
+  stop-color: #e9fef6;
 }
 
 .ocean-surface {
-  fill: $ocean-surface;
+  fill: #ade0eb;
 }
 
 .ocean-shallow {
-  stop-color: $ocean-shallow;
+  stop-color: #9fc2ca;
 }
 
 .ocean-deep {
-  stop-color: $ocean-deep;
+  stop-color: #306b98;
 }
 
 .ice {
@@ -55,32 +45,94 @@ $ocean-surface: hsl(190, 60%, 80%);
 }
 
 /*Light Beams*/
-
+@-webkit-keyframes beams {
+  100% {
+    opacity: 0.8;
+  }
+}
 @keyframes beams {
   100% {
     opacity: 0.8;
   }
 }
-
 .beam {
   opacity: 0;
-  animation: beams 4s both infinite alternate;
-  @for $i from 1 through 14 {
-    &:nth-child(#{$i}) {
-      animation-delay: -2s * $i;
-    }
-  }
+  -webkit-animation: beams 4s both infinite alternate;
+          animation: beams 4s both infinite alternate;
+}
+.beam:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+.beam:nth-child(2) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+.beam:nth-child(3) {
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+}
+.beam:nth-child(4) {
+  -webkit-animation-delay: -8s;
+          animation-delay: -8s;
+}
+.beam:nth-child(5) {
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
+}
+.beam:nth-child(6) {
+  -webkit-animation-delay: -12s;
+          animation-delay: -12s;
+}
+.beam:nth-child(7) {
+  -webkit-animation-delay: -14s;
+          animation-delay: -14s;
+}
+.beam:nth-child(8) {
+  -webkit-animation-delay: -16s;
+          animation-delay: -16s;
+}
+.beam:nth-child(9) {
+  -webkit-animation-delay: -18s;
+          animation-delay: -18s;
+}
+.beam:nth-child(10) {
+  -webkit-animation-delay: -20s;
+          animation-delay: -20s;
+}
+.beam:nth-child(11) {
+  -webkit-animation-delay: -22s;
+          animation-delay: -22s;
+}
+.beam:nth-child(12) {
+  -webkit-animation-delay: -24s;
+          animation-delay: -24s;
+}
+.beam:nth-child(13) {
+  -webkit-animation-delay: -26s;
+          animation-delay: -26s;
+}
+.beam:nth-child(14) {
+  -webkit-animation-delay: -28s;
+          animation-delay: -28s;
 }
 
 /*Waves-Movements*/
-
 .wave {
-  animation: waves-move 5s infinite linear;
-  animation-fill-mode: backwards;
+  -webkit-animation: waves-move 5s infinite linear;
+          animation: waves-move 5s infinite linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .reverse {
   animation-direction: reverse;
+}
+
+@-webkit-keyframes waves-move {
+  100% {
+    transform: translate(500px, 0);
+  }
 }
 
 @keyframes waves-move {
@@ -88,13 +140,18 @@ $ocean-surface: hsl(190, 60%, 80%);
     transform: translate(500px, 0);
   }
 }
-
 /*Ice Berg Animation*/
-
 .ice-berg {
   transform: rotate(-2deg) translate(0, 0);
   transform-origin: 400px 400px;
-  animation: ice-berg 3s ease-in-out infinite alternate;
+  -webkit-animation: ice-berg 3s ease-in-out infinite alternate;
+          animation: ice-berg 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes ice-berg {
+  100% {
+    transform: rotate(2deg) translate(10px, 30px);
+  }
 }
 
 @keyframes ice-berg {
@@ -102,12 +159,9 @@ $ocean-surface: hsl(190, 60%, 80%);
     transform: rotate(2deg) translate(10px, 30px);
   }
 }
-
 /*Body Setup*/
-
-$hue: 40;
 body {
-  background: hsl($hue, 50%, 90%);
+  background: #f2ead9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,7 +173,7 @@ body {
   font-size: 8vh;
   padding: 2.5vh;
   margin: 0;
-  color: hsl($hue, 40%, 30%);
+  color: #6b572e;
   border-top: 1px solid;
   border-bottom: 1px solid;
   font-family: "Unica One", cursive;
@@ -130,7 +184,6 @@ body {
   height: 80vh;
   vertical-align: bottom;
 }
-
 </style>
 </head>
 <body>
