@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Bitter|Muli');
+
+body {
+  margin: 0 auto;
+  background: #fff;
+  height: 100vh;
+}
+
+body, .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container > div {
+  box-shadow: 0 0 15.55px black;
+  border-radius: .5em;
+  position: relative;
+  width: 275.55px;
+  height: 255.55px;
+  margin: 15.55px;
+  overflow: hidden;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+}
+
+.prop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  top: -75.55px;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: black;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0) translateY(50vh) rotateZ(360deg);
+  transition: all 0.8s;
+}
+
+.container > div:hover .prop {
+  top: 0;
+  opacity: 0.7;
+  transform: scale(1) translateY(0vh) rotateZ(0deg);
+}
+
+h4 {
+  font-family: 'Bitter', sans-serif;
+  font-size: 25.55px;
+  margin: 0;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  font-size: 17.5px;
+}
+
+button {
+  font-family: 'Muli', sans-serif;
+  font-size: 15.5px;
+  font-weight: bolder;
+  margin-top: 25.55px;
+  padding: 5.55px;
+  border-radius: 50px;
+  outline: 0;
+  border: 1.5px solid #fff;
+  background: transparent;
+  color: #fff;
+  width: 50%;
+}
+
+button:hover{
+  background: #fff;
+  color: black;
+  transition: .5s;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <body>
+        <div class="container">
+          <div>
+            <div class="prop">
+              <h4>Mountains</h4>
+              <p>Do you wanna look?</p>
+              <button>Open</button>
+            </div>
+            
+                <img src="https://s-media-cache-ak0.pinimg.com/originals/39/10/d7/3910d7ff2461d50254fbfd6b358e03fa.jpg" alt="">
+          </div>
+          <div>
+            <div class="prop">
+              <h4>Mountains</h4>
+              <p>Do you wanna look?</p>
+              <button>Open</button>
+            </div>
+            
+                <img src="https://i.pinimg.com/736x/0c/0e/8d/0c0e8d538731835c12bdc41ae180343e--mountain-silhouette-mountain-wallpaper.jpg" alt="">
+          </div>
+        </div>
+      </body>
+</body>
+</html>
