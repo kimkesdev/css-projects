@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+  background: #5935ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.front-stand .bird .feet::after, .front-stand .bird .feet::before, .front-stand .bird .eye::after, .front-stand .bird .mouth::before, .front-stand .bird .mouth::after, .front-stand .pod .pod-bottom::before, .front-stand .pod .pod-bottom::after, .background-stand::after, .main-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.front-stand,
+.pod-top,
+.pod-middle,
+.pod-bottom,
+.pod-main,
+.pod-shadow,
+.musical-note,
+.rectangle,
+.circle,
+.bird,
+.mouth,
+.body,
+.tail,
+.feet,
+.footstool,
+.eye {
+  position: absolute;
+}
+
+.main-wrapper {
+  position: relative;
+  transform: scale(1.5);
+}
+.main-wrapper::after {
+  width: 300px;
+  height: 300px;
+  background: rgba(18, 0, 102, 0.3);
+  left: 55px;
+  top: 58px;
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.background-stand {
+  position: relative;
+  background: #00b6bb;
+  width: 307px;
+  height: 307px;
+  border-radius: 100%;
+}
+.background-stand::after {
+  background: #20d7c4;
+  width: 229px;
+  height: 229px;
+  border-radius: 100%;
+  top: 24px;
+  left: 13px;
+}
+
+.front-stand {
+  width: 307px;
+  height: 325px;
+  bottom: -9px;
+}
+.front-stand .pod .pod-top {
+  width: 10px;
+  height: 93px;
+  background: #e60359;
+  left: 67px;
+}
+.front-stand .pod .pod-middle {
+  width: 68px;
+  height: 33px;
+  border: 8px solid #e60359;
+  border-radius: 25px 25px 0 0;
+  left: 32px;
+  top: 93px;
+}
+.front-stand .pod .pod-bottom {
+  width: 92px;
+  height: 80px;
+  left: 28px;
+  top: 105px;
+}
+.front-stand .pod .pod-bottom::before, .front-stand .pod .pod-bottom::after {
+  width: 10px;
+  height: 19px;
+  background: #5980ff;
+  border: 3.69266px solid #5980ff;
+  top: 19px;
+  border-radius: 5px;
+}
+.front-stand .pod .pod-bottom::after {
+  left: 75px;
+}
+.front-stand .pod .pod-bottom .pod-shadow {
+  border-radius: 13px;
+  position: absolute;
+  background: transparent;
+  width: 40px;
+  height: 65px;
+  left: 22px;
+  z-index: 14;
+  border-right: 10px solid #3563ec;
+  border-bottom: 10px solid #3563ec;
+}
+.front-stand .pod .pod-bottom .pod-main {
+  width: 52px;
+  height: 76px;
+  background: #5980ff;
+  left: 20.5px;
+  border-radius: 16px;
+}
+.front-stand .pod .pod-bottom .pod-main div {
+  position: absolute;
+  background: #132dae;
+  border-radius: 8px;
+  z-index: 15;
+  left: -2px;
+  width: 22px;
+  height: 8px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(1), .front-stand .pod .pod-bottom .pod-main div:nth-child(4) {
+  top: 19px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(2), .front-stand .pod .pod-bottom .pod-main div:nth-child(5) {
+  top: 32px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(3), .front-stand .pod .pod-bottom .pod-main div:nth-child(6) {
+  top: 45px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(4), .front-stand .pod .pod-bottom .pod-main div:nth-child(5), .front-stand .pod .pod-bottom .pod-main div:nth-child(6) {
+  left: 32px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(7), .front-stand .pod .pod-bottom .pod-main div:nth-child(8) {
+  top: 64px;
+  left: 20px;
+  transform: rotate(90deg);
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(7) {
+  left: 8px;
+}
+.front-stand .pod .pod-bottom .pod-main div:nth-child(8) {
+  left: 21px;
+}
+.front-stand .musical-note-single {
+  animation: musicalnote 4s ease infinite;
+}
+.front-stand .musical-note-single .musical-note {
+  transform: rotate(335deg) scale(1);
+  opacity: 1;
+  position: absolute;
+  top: 232px;
+  left: 94px;
+}
+.front-stand .musical-note-single .musical-note .rectangle {
+  width: 5px;
+  height: 30px;
+  background: #5935ff;
+  bottom: -8px;
+  left: 13px;
+}
+.front-stand .musical-note-single .musical-note .circle {
+  background: #5935ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+.front-stand .musical-note-second {
+  animation: musicalnote 3s ease infinite;
+}
+.front-stand .musical-note-second .musical-note {
+  transform: rotate(21deg) scale(0.8);
+  opacity: 1;
+  position: absolute;
+  top: 79px;
+  left: 148px;
+}
+.front-stand .musical-note-second .musical-note .rectangle {
+  width: 5px;
+  height: 30px;
+  background: #5935ff;
+  bottom: -8px;
+  left: 13px;
+}
+.front-stand .musical-note-second .musical-note .circle {
+  background: #5935ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+.front-stand .musical-note-third {
+  animation: musicalnote 2s ease infinite;
+}
+.front-stand .musical-note-third .musical-note {
+  transform: rotate(21deg) scale(0.6);
+  opacity: 0.8;
+  position: absolute;
+  top: 63px;
+  left: 123px;
+}
+.front-stand .musical-note-third .musical-note .rectangle {
+  width: 5px;
+  height: 30px;
+  background: #5935ff;
+  bottom: -8px;
+  left: 13px;
+}
+.front-stand .musical-note-third .musical-note .circle {
+  background: #5935ff;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+.front-stand .bird {
+  top: 165px;
+  left: 158px;
+}
+.front-stand .bird .body {
+  width: 107px;
+  height: 91px;
+  background: #fa0034;
+  border-radius: 47px;
+  top: -11px;
+  left: -15px;
+  z-index: 1;
+  animation: bodysingin 3s linear infinite;
+}
+.front-stand .bird .mouth {
+  z-index: 1;
+  bottom: 6px;
+  left: 2px;
+}
+.front-stand .bird .mouth::before, .front-stand .bird .mouth::after {
+  width: 41px;
+  height: 19px;
+  background: #fd6e00;
+  border: 10px;
+  border-radius: 10px;
+}
+.front-stand .bird .mouth::before {
+  transform: rotate(40deg);
+  left: -35px;
+  top: 17px;
+  animation: mouthbeforesingin 3s linear infinite;
+}
+.front-stand .bird .mouth::after {
+  left: -35px;
+  top: 29px;
+  transform: rotate(314deg);
+  animation: mouthaftersingin 3s linear infinite;
+}
+.front-stand .bird .eye {
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  border-radius: 100%;
+  z-index: 22;
+  left: 7px;
+  top: 8px;
+}
+.front-stand .bird .eye::after {
+  width: 25px;
+  height: 25px;
+  background: #fa0135;
+  border-radius: 100%;
+  z-index: 22;
+  left: 2px;
+  top: 19px;
+  animation: eyesingin 8s ease-in-out infinite;
+}
+.front-stand .bird .feet {
+  top: 54px;
+  left: 5px;
+}
+.front-stand .bird .feet div {
+  position: absolute;
+  background: #fd6e00;
+  width: 45px;
+  height: 11px;
+  border-radius: 10px;
+  top: 35px;
+  left: 10px;
+}
+.front-stand .bird .feet::after, .front-stand .bird .feet::before {
+  background: #fd6e00;
+  width: 24px;
+  height: 10px;
+  border-radius: 10px;
+  top: 23px;
+  transform: rotate(90deg);
+}
+.front-stand .bird .feet::before {
+  left: 9px;
+}
+.front-stand .bird .feet::after {
+  left: 32px;
+}
+.front-stand .bird .tail {
+  left: 31px;
+  top: 14px;
+  width: 75px;
+  height: 40px;
+  z-index: 0;
+  transform: rotate(303deg);
+  animation: tailsingin 3s linear infinite;
+}
+.front-stand .bird .tail div {
+  position: absolute;
+  width: 13px;
+  height: 62px;
+  background: #ffaf33;
+  border: 10px;
+  border-radius: 10px;
+}
+.front-stand .bird .tail div:nth-child(1) {
+  left: 17px;
+}
+.front-stand .bird .tail div:nth-child(2) {
+  left: 29px;
+  top: 10px;
+}
+.front-stand .bird .tail div:nth-child(3) {
+  left: 41px;
+  top: 20px;
+}
+.front-stand .footstool {
+  top: 230px;
+  left: 156px;
+}
+.front-stand .footstool .top,
+.front-stand .footstool .middle,
+.front-stand .footstool .bottom {
+  position: absolute;
+}
+.front-stand .footstool .top {
+  background: #5980ff;
+  width: 72px;
+  height: 16px;
+  border-radius: 10px;
+  top: 35px;
+  z-index: 1;
+}
+.front-stand .footstool .middle {
+  width: 15px;
+  height: 42px;
+  background: #132dae;
+  top: 37px;
+  left: 31px;
+  transform: rotate(340deg);
+}
+.front-stand .footstool .bottom {
+  top: 73px;
+  left: 27px;
+  background: #5980ff;
+  width: 44px;
+  height: 22px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+@keyframes musicalnote {
+  0% {
+    opacity: 0.5;
+    transform: rotate(2deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(2deg);
+  }
+}
+@keyframes bodysingin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mouthbeforesingin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(19deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(19deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mouthaftersingin {
+  0% {
+    transform: rotate(335deg);
+  }
+  25% {
+    transform: rotate(330deg);
+  }
+  50% {
+    transform: rotate(335deg);
+  }
+  75% {
+    transform: rotate(330deg);
+  }
+  100% {
+    transform: rotate(335deg);
+  }
+}
+@keyframes tailsingin {
+  0% {
+    top: 14px;
+  }
+  25% {
+    top: 20px;
+  }
+  50% {
+    top: 14px;
+  }
+  75% {
+    top: 20px;
+  }
+  100% {
+    top: 14px;
+  }
+}
+@keyframes eyesingin {
+  0% {
+    top: 19px;
+  }
+  25% {
+    top: 9px;
+  }
+  50% {
+    top: 19px;
+  }
+  75% {
+    top: 9px;
+  }
+  100% {
+    top: 19px;
+  }
+}
+@keyframes opacitychanger {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backroundsinging {
+  0% {
+    width: 229px;
+    height: 229px;
+  }
+  25% {
+    width: 232px;
+    height: 232px;
+  }
+  50% {
+    width: 229px;
+    height: 229px;
+  }
+  75% {
+    width: 232px;
+    height: 232px;
+  }
+  100% {
+    width: 229px;
+    height: 229px;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="background-stand"></div>
+        <div class="front-stand">
+          <div class="pod">
+            <div class="pod-top"></div>
+            <div class="pod-middle"></div>
+            <div class="pod-bottom">
+              <div class="pod-shadow"></div>
+              <div class="pod-main">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="musical-note-single">
+            <div class="musical-note">
+              <div class="rectangle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="musical-note-second">
+            <div class="musical-note">
+              <div class="rectangle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="musical-note-third">
+            <div class="musical-note">
+              <div class="rectangle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="bird">
+            <div class="mouth"></div>
+            <div class="body"></div>
+            <div class="eye"></div>
+            <div class="tail">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="feet">
+              <div></div>
+            </div>
+          </div>
+          <div class="footstool">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
