@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+  background-color: #4167E9;
+  position: relative
+}
+.container {
+  width: 380px;
+  height: 350px;
+  background-color: #DDD;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 5px 5px 40px #0d4e9c
+}
+.one, .two {
+  width: 18px;
+  height: 45px;
+  display:block;
+  background-color: #FFF;
+  z-index: 1;
+  border-radius: 8px;
+  position: absolute;
+  top: -20px
+}
+.one {
+  left: 80px
+}
+.two {
+  right: 80px
+}
+.container .fe {
+  width: 100%;
+  height: 70px;
+  top: 0;
+  background-color: #3952C7;
+  position: absolute;
+}
+
+.container .sr, .container .sr2, .container .sr3 {
+  height: 220px;
+  position: absolute;
+  box-shadow: 0 2px 5px #cacfff
+}
+.container .sr {
+  width: 280px;
+  background-color: #f8f9ff;
+  overflow:hidden;
+  top:70px;
+  left:50px;
+  z-index:3
+}
+.container .sr2 {
+  width: 260px;
+  background-color: #eceef7;
+  top:80px;
+  left:60px;
+  z-index:2
+}
+.container .sr3 {
+  width: 240px;
+  background-color: #e2e6f1;
+  top: 90px;
+  left: 70px;
+  z-index: 1
+}
+.container .sr p {
+  width: 15px;
+  height: 15px;
+  background-color: #6120ec;
+  border-radius: 100%;
+  float: left;
+  margin-left: 45px;
+  margin-top: 22px;
+  word-wrap: break-word;
+}
+.container .sr p:last-child {
+  visibility: hidden
+}
+.container .sr p:first-child {
+  visibility: hidden
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <span class="one"></span><span class="two"></span>
+        <div class="fe"></div>
+        <div class="sr">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="sr2"></div>
+        <div class="sr3"></div>
+      </div>
+</body>
+</html>
