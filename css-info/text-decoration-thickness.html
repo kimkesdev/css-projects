@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>text-decoration-thickness</title>
+    <style>
+        .thin {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: pink;
+        text-decoration-thickness: 1px;
+        }
+
+        .thick {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: lightblue;
+        text-decoration-thickness: 5px;
+        }
+
+        .shorthand {
+        text-decoration: underline solid greenyellow 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <p class="thin">Here's some text with a 1px pink underline.</p>
+    <p class="thick">This one has a 5px lightblue underline.</p>
+    <p class="shorthand">This uses the equivalent shorthand.</p>
+
+    <p>
+        Single keyword<br>
+        text-decoration-thickness: auto;<br>
+        text-decoration-thickness: from-font;<br>
+
+        length <br>
+        text-decoration-thickness: 0.1em;<br>
+        text-decoration-thickness: 3px;<br>
+
+        percentage <br>
+        text-decoration-thickness: 10%;<br>
+
+        Global values <br>
+        text-decoration-thickness: inherit;<br>
+        text-decoration-thickness: initial;<br>
+        text-decoration-thickness: revert;
+        text-decoration-thickness: revert-layer;<br>
+        text-decoration-thickness: unset;b<br>
+    </p>
 </body>
 </html>
