@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+          width: 300px;
+          height: 100px;
+          background-color: pink;
+          border: 1px solid black;
+        }
+        
+        div#myDiv1 {
+          transform: matrix(1, -0.3, 0, 1, 0, 0);
+        }
+        
+        div#myDiv2 {
+          transform: matrix(1, 0, 0.5, 1, 150, 0);
+        }
+        div#myDiv3 {
+  transform: scaleY(3);
+}
+div#myDiv4 {
+  transform: skewY(20deg);
+}
+div#myDiv5 {
+  transform: scaleX(2);
+}
+        </style>
+</head>
+<body>
+    <div>
+        This a normal div element.
+        </div>
+        
+        <div id="myDiv1">
+        Using the matrix() method. transform: matrix(1, -0.3, 0, 1, 0, 0);
+        </div>
+        
+        <div id="myDiv2">
+        Another use of the matrix() method. transform: matrix(1, 0, 0.5, 1, 150, 0);
+        </div>
+
+        <div id="myDiv3">
+            This div element is three times of its original height. transform: scaleY(3)
+        </div>
+
+        <div id="myDiv4">
+            This div element is skewed 20 degrees along the Y-axis. transform: skewY(20deg);
+        </div> 
+
+        <div id="myDiv5">
+            This div element is two times of its original width. transform: scaleX(2);
+        </div>
+</body>
+</html>
