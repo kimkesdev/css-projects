@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .container {
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 100px;
+}
+.container:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #0b2026;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.cactus__body {
+  height: 150px;
+  width: 50px;
+  margin: 0 auto;
+  background-color: #abcb89;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  border: 4px solid #0b2026;
+  position: relative;
+}
+.cactus__branch {
+  position: absolute;
+}
+.cactus__branch:first-child {
+  top: 50%;
+  right: -58px;
+}
+.cactus__branch:first-child > div:first-child {
+  width: 50px;
+  height: 30px;
+  background-color: #abcb89;
+  border-bottom-right-radius: 100px;
+  position: relative;
+  border: 4px solid #0b2026;
+}
+.cactus__branch:first-child > div:first-child > div {
+  width: 30px;
+  height: 40px;
+  background-color: #abcb89;
+  top: -44px;
+  right: -4px;
+  position: absolute;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border: 4px solid #0b2026;
+  border-bottom: none;
+}
+.cactus__branch:nth-of-type(2) {
+  top: 20%;
+  left: -58px;
+}
+.cactus__branch:nth-of-type(2) > div:first-child {
+  width: 50px;
+  height: 30px;
+  background-color: #abcb89;
+  border-bottom-left-radius: 100px;
+  position: relative;
+  border: 4px solid #0b2026;
+}
+.cactus__branch:nth-of-type(2) > div:first-child > div {
+  width: 30px;
+  height: 40px;
+  background-color: #abcb89;
+  top: -44px;
+  left: -4px;
+  position: absolute;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border: 4px solid #0b2026;
+  border-bottom: none;
+}
+.cactus__thorn {
+  border: solid #0b2026;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  z-index: 1;
+}
+.cactus__thorn:first-child {
+  top: 30px;
+  left: 10px;
+}
+.cactus__thorn:nth-child(2) {
+  top: 50px;
+  right: 10px;
+}
+.cactus__thorn:nth-child(3) {
+  top: 70px;
+  left: 10px;
+}
+.cactus__thorn:nth-child(4) {
+  top: 100px;
+  right: 10px;
+}
+.cactus__thorn:nth-child(5) {
+  top: 110px;
+  left: 10px;
+}
+.cactus__thorn:nth-child(6) {
+  top: 80px;
+  right: 10px;
+}
+.cactus__thorns {
+  overflow: hidden;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  height: 100%;
+  position: relative;
+}
+.cactus__thorns::before {
+  content: "";
+  background-color: #d0e89b;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 8px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  bottom: 0;
+}
+.cactus__thorns::after {
+  content: "";
+  background-color: #85b271;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 15px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  bottom: 0;
+}
+
+.pot {
+  margin: 0 auto;
+  width: 50px;
+  height: 60px;
+  position: relative;
+}
+.pot__top {
+  width: 80px;
+  background-color: #e7f1d4;
+  height: 10px;
+  position: absolute;
+  left: -38%;
+  top: -10px;
+  margin: 0 auto;
+  border: 4px solid #0b2026;
+  z-index: 9;
+}
+.pot__top:after {
+  content: "";
+  position: absolute;
+  background-color: #b4c0ac;
+  width: 10px;
+  z-index: 3;
+  display: block;
+  height: 100%;
+  right: 0;
+}
+.pot__left {
+  background-color: #e7f1d4;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: -10px;
+  transform: skew(10deg);
+  border-left: 4px solid #0b2026;
+  z-index: 1;
+}
+.pot__right {
+  background-color: #e7f1d4;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  right: -10px;
+  transform: skew(-10deg);
+  border-right: 4px solid #0b2026;
+  z-index: 1;
+}
+.pot__right:after {
+  content: "";
+  position: absolute;
+  background-color: #b4c0ac;
+  width: 10px;
+  z-index: 3;
+  display: block;
+  height: 100%;
+  right: 0;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="cactus">
+          <div class="cactus__body">
+            <div class="cactus__branch">
+              <div>
+                <div>
+                  <div class="cactus__thorn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="cactus__branch">
+              <div>
+                <div>
+                  <div class="cactus__thorn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="cactus__thorns">
+              <div class="cactus__thorn"></div>
+              <div class="cactus__thorn"></div>
+              <div class="cactus__thorn"></div>
+              <div class="cactus__thorn"></div>
+              <div class="cactus__thorn"></div>
+              <div class="cactus__thorn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pot">
+          <div class="pot__top"></div>
+          <div class="pot__left"></div>
+          <div class="pot__right"></div>
+        </div>
+      </div>
+</body>
+</html>
