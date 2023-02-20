@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .box .record::after {
+  box-shadow: 0px 0px 0px 15px rgba(225, 225, 225, 0.2), 0 0px 0px 17px black, 0px 0px 0px 19px rgba(225, 225, 225, 0.2), 0px 0px 0px 21px black;
+  border: 4px solid #333;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.wrapper {
+  margin: 100px auto;
+  max-width: 500px;
+}
+
+.box {
+  width: 280px;
+  height: 180px;
+  background-color: #9b9b9b;
+  border-radius: 7px;
+  padding: 15px 10px;
+  position: relative;
+}
+.box.play .record {
+  animation-name: spin;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+.box.play .thing {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.box .record {
+  background-color: #000;
+  height: 100%;
+  width: 180px;
+  border-radius: 100%;
+  position: relative;
+  border: 3px solid #333;
+}
+.box .record::after {
+  content: "";
+  position: absolute;
+  background-color: #f54241;
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+.box .record::before {
+  content: "";
+  position: absolute;
+  background-color: #9b9b9b;
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 9;
+}
+.box .record .shadow {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin: 0 auto;
+  border: 5px solid rgba(225, 225, 225, 0.3);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-left-radius: 50% 40px;
+  border-top-right-radius: 50% 40px;
+}
+.box .record .shadow:last-child {
+  top: 20px;
+  width: 85px;
+}
+.box .controls {
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background-color: #000000;
+  right: 10px;
+  bottom: 10px;
+}
+.box .controls:last-child {
+  bottom: 17px;
+}
+.box .thing {
+  position: absolute;
+  width: 6px;
+  height: 70px;
+  background-color: #f5f5f5;
+  right: 70px;
+  top: 30px;
+  z-index: 9;
+  transform-origin: top;
+}
+.box .thing::after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  width: 12px;
+  height: 15px;
+  right: -3px;
+}
+.box .thing .little-thing {
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 95%;
+  right: 10px;
+  height: 40px;
+  width: 6px;
+  transform: rotateZ(30deg);
+}
+.box .thing .little-thing::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background-color: #515151;
+  width: 22px;
+  height: 22px;
+  bottom: -10px;
+  right: -8px;
+  border: 2px solid #292929;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes move {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(15deg);
+  }
+}
+</style>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="box play" id="box">
+          <div class="thing">
+            <div class="little-thing"></div>
+          </div>
+          <div class="record">
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+          </div>
+          <div class="controls"></div>
+          <div class="controls"></div>
+        </div>
+      </main>
+</body>
+</html>
