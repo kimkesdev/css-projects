@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    a[href$=".pdf"]::before {
+  background-image: url(https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/fc7bLiJYf5US6QxTOKsF.png);
+}
+
+a[href$=".jpg"]::before,
+a[href$=".png"]::before {
+  background-image: url(https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/N79qCc0c06217YT4ofYM.png);
+}
+
+
+a::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+  background-size: 100%;
+  margin-inline-end: 0.5em;
+  opacity: 0.8;
+}
+
+</style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+          <article class="flow">
+            <h1>Attribute selectors</h1>
+            <figure class="callout">
+              <p>
+                Using an attribute selector that looks for an attribute value that’s
+                suffixed with a pattern (<code>[attr$=value]</code>) is handy for looking
+                for certain file types in a link’s <code>href</code> attribute.
+              </p>
+      
+              <p>
+                In this example, we’re using that approach to add an icon for the file type.
+              </p>
+            </figure>
+      
+            <h2>Downloads</h2>
+            <ul>
+              <li>
+                <a href="my-image.jpg">An example image</a>
+              </li>
+              <li>
+                <a href="my-document.pdf">An example document</a>
+              </li>
+              <li>
+                <a href="my-document.pdf">Another example document</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </main>
+</body>
+</html>

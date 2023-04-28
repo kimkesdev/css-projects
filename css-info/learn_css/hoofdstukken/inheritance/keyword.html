@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inherit keyword</title>
+    <style>
+        strong {
+  font-weight: 900;
+}
+
+.my-component {
+  font-weight: 500;
+}
+
+.my-component strong {
+  font-weight: inherit;
+}
+
+/* System font stack to show the difference in weights */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+          <article class="flow">
+            <h1>Controlling and utilising inheritance</h1>
+            <p>The <strong>bold elements inside a <code>&lt;strong&gt;</code></strong> have a <code>font-weight</code> of <code>900</code> by default. </p>
+            <div class="my-component">
+              <p>This text is in a component called <code>.my-component</code>, which has a <code>font-weight</code> of <code>500</code>. </p>
+            </div>
+            <div class="my-component">
+              <p><strong>This <code>&lt;strong&gt;</code> element is inside <code>.my-component</code>. It inherits the <code>500</code> weight because it’s <code>font-weight</code> is set to <code>inherit</code>.</strong></p>
+            </div>
+          </article>
+        </div>
+      </main>
+</body>
+</html>

@@ -17,4 +17,7 @@ Create with Bootstrap theme.
 ## Flip Card, Profile Card, Cutout Text
 W3Schools
 
+## Learn_css
+https://web.dev/learn/css/
+
 https://www.youtube.com/watch?v=Eh3kt0Xqea0

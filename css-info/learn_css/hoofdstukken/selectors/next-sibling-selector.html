@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next sibling selector</title>
+<style>
+    .top * + * {
+  margin-top: 1.5em;
+}
+
+/* Presentation styles */
+.top p {
+  border: 1px solid blue;
+  background: pink;
+  padding: 1em;
+}
+
+/* Presentational styles */
+.top > * + * {
+  position: relative;
+}
+
+.top > * + *::before {
+  content: "";
+  width: 100%;
+  height: 1.5em;
+  background: #ff807b;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  outline: 1px solid #9d0600;
+}
+</style>    
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+          <article class="flow">
+            <h1>Next sibling selector</h1>
+            <figure class="callout">
+              <p>
+                The <strong>next sibling selector</strong> allows us to only add margin to
+                siblings that follow each other.
+              </p>
+            </figure>
+            <div class="top box">
+              <p>I have no margin because I am the first child.</p>
+              <p>
+                I have <code>margin-top</code> because I am a <strong>next sibling</strong>.
+              </p>
+              <p>I am also a <strong>next sibling</strong>, so also get margin top.</p>
+            </div>
+          </article>
+        </div>
+      </main>
+</body>
+</html>
