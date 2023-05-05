@@ -21,3 +21,6 @@ W3Schools
 https://web.dev/learn/css/
 
 https://www.youtube.com/watch?v=Eh3kt0Xqea0
+
+## TailwindCSS
+npm install tw-elements
