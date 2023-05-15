@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  background: #3faf82;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.menu div {
+  height: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2 ease-in-out;
+  transition: all 0.5s;
+}
+
+.menu.active div:nth-child(2) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu.active div:nth-child(1) {
+  -webkit-animation: bar1Ani 0.5s ease-in-out forwards;
+          animation: bar1Ani 0.5s ease-in-out forwards;
+  /* z-index: 2; */
+}
+
+.menu.active div:nth-child(3) {
+  -webkit-animation: bar3Ani 0.5s ease-in-out forwards;
+          animation: bar3Ani 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes bar1Ani {
+  50% {
+    transform: translateY(22px);
+  }
+  100% {
+    transform: translateY(22px) rotatez(45deg);
+  }
+}
+
+@keyframes bar1Ani {
+  50% {
+    transform: translateY(22px);
+  }
+  100% {
+    transform: translateY(22px) rotatez(45deg);
+  }
+}
+@-webkit-keyframes bar3Ani {
+  50% {
+    transform: translateY(-22px);
+  }
+  100% {
+    transform: translateY(-22px) rotatez(135deg);
+  }
+}
+@keyframes bar3Ani {
+  50% {
+    transform: translateY(-22px);
+  }
+  100% {
+    transform: translateY(-22px) rotatez(135deg);
+  }
+}
+.menu div:nth-child(1) {
+  -webkit-animation: bar1RevAni 0.5s ease-in-out;
+          animation: bar1RevAni 0.5s ease-in-out;
+}
+
+@-webkit-keyframes bar1RevAni {
+  0% {
+    transform: translateY(22px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(22px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotatez(0deg);
+  }
+}
+
+@keyframes bar1RevAni {
+  0% {
+    transform: translateY(22px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(22px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotatez(0deg);
+  }
+}
+.menu div:nth-child(3) {
+  -webkit-animation: bar3RevAni 0.5s ease-in-out;
+          animation: bar3RevAni 0.5s ease-in-out;
+}
+
+@-webkit-keyframes bar3RevAni {
+  0% {
+    transform: translateY(-22px) rotate(135deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bar3RevAni {
+  0% {
+    transform: translateY(-22px) rotate(135deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="menu">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+              </div>
+        </div>
+      </div>
+<script>
+let menu = document.querySelector(".menu");
+menu.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+</body>
+</html>
