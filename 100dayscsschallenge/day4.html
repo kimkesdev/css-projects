@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #00b8ac;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #86e0db;
+  border-radius: 50%;
+}
+.circle:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+  -webkit-animation: scale-1 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+          animation: scale-1 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+.circle:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  z-index: -2;
+  -webkit-animation: scale-2 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+          animation: scale-2 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+.circle:nth-child(3) {
+  width: 120px;
+  height: 120px;
+  z-index: -3;
+  -webkit-animation: scale-3 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+          animation: scale-3 3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+@-webkit-keyframes scale-1 {
+  0%, 70% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-1 {
+  0%, 70% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scale-2 {
+  0%, 40% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+@keyframes scale-2 {
+  0%, 40% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scale-3 {
+  0%, 10% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+@keyframes scale-3 {
+  0%, 10% {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+        </div>
+      </div>
+</body>
+</html>
