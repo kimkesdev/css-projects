@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.font-sm {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 11px;
+}
+
+.font-lg {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #c27ba0;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.card .header {
+  height: 60px;
+  background-color: #6fa8dc;
+  color: #fff;
+  padding: 11px 15px 16px 15px;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template: "title type" "date value";
+}
+.card .header .title {
+  grid-area: title;
+}
+.card .header .data {
+  grid-area: date;
+}
+.card .header .type {
+  grid-area: type;
+  text-align: right;
+}
+.card .header .value {
+  grid-area: value;
+  text-align: right;
+}
+
+.parameter {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+.parameter span {
+  position: relative;
+  font-size: 9px;
+  padding: 0 10px 0 25px;
+}
+.parameter span:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: block;
+  content: "";
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+.parameter .orange:before {
+  background-color: #FFA500;
+}
+.parameter .green:before {
+  background-color: #008000;
+}
+
+.statistic {
+  position: relative;
+  padding: 0 10px;
+}
+.statistic .line {
+  margin-top: 39px;
+  width: 100%;
+  height: 1px;
+  background-color: #F2F2F2;
+}
+.statistic .line:first-child {
+  margin-top: 0;
+}
+.statistic .data svg {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.statistic .data svg polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.statistic .data.orange polyline {
+  stroke: #FFA500;
+}
+.statistic .data.green polyline {
+  stroke: #008000;
+}
+.statistic .data .tooltip {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  padding: 8px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+.statistic .data .tooltip:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  transform: rotate(45deg);
+}
+.statistic .data [class^=point-] {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+.statistic .data [class^=point-]:hover .tooltip {
+  transform: translate(-50%, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.statistic .data.orange [class^=point-],
+.statistic .data.orange .tooltip, .statistic .data.orange .tooltip:after {
+  background-color: #FFA500;
+}
+.statistic .data.orange .point-1 {
+  top: 43px;
+  left: 17px;
+}
+.statistic .data.orange .point-2 {
+  top: 9px;
+  left: 58px;
+}
+.statistic .data.orange .point-3 {
+  top: 20px;
+  left: 98px;
+}
+.statistic .data.orange .point-4 {
+  top: 8px;
+  left: 138px;
+}
+.statistic .data.orange .point-5 {
+  top: 35px;
+  left: 179px;
+}
+.statistic .data.orange .point-6 {
+  top: 45px;
+  left: 219px;
+}
+.statistic .data.orange .point-7 {
+  top: 16px;
+  left: 259px;
+}
+.statistic .data.green [class^=point-],
+.statistic .data.green .tooltip, .statistic .data.green .tooltip:after {
+  background-color: #008000;
+}
+.statistic .data.green .point-1 {
+  top: 58px;
+  left: 17px;
+}
+.statistic .data.green .point-2 {
+  top: 47px;
+  left: 58px;
+}
+.statistic .data.green .point-3 {
+  top: 62px;
+  left: 98px;
+}
+.statistic .data.green .point-4 {
+  top: 52px;
+  left: 138px;
+}
+.statistic .data.green .point-5 {
+  top: 58px;
+  left: 179px;
+}
+.statistic .data.green .point-6 {
+  top: 71px;
+  left: 219px;
+}
+.statistic .data.green .point-7 {
+  top: 61px;
+  left: 259px;
+}
+
+.days {
+  padding: 10px 8px;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #949494;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.days .day {
+  display: block;
+  width: 24px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+  <div class="card">
+		<div class="header">
+			<span class="title font-lg">Weekly report</span>
+			<span class="date font-sm">May 15 - May 21</span>
+			<span class="type font-sm">Revenue</span>
+			<span class="value font-lg">€ 3621,79</span>
+		</div>
+		<div class="parameter">
+			<span class="orange">Views</span>
+			<span class="green">Purchases</span>
+		</div>
+		<div class="statistic">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="data orange">
+				<svg>
+					<polyline points="9,46 50,12 90,23 130,11 171,38 211,48 251,19"></polyline>
+				</svg>
+				<div class="points">
+					<div class="point-1">
+						<div class="tooltip">300</div>
+					</div>
+					<div class="point-2">
+						<div class="tooltip">900</div>
+					</div>
+					<div class="point-3">
+						<div class="tooltip">600</div>
+					</div>
+					<div class="point-4">
+						<div class="tooltip">999</div>
+					</div>
+					<div class="point-5">
+						<div class="tooltip">350</div>
+					</div>
+					<div class="point-6">
+						<div class="tooltip">450</div>
+					</div>
+					<div class="point-7">
+						<div class="tooltip">320</div>
+					</div>
+				</div>
+			</div>
+			<div class="data green">
+				<svg>
+					<polyline points="9,61 50,50 90,65 130,55 171,61 211,74 251,64"></polyline>    
+				</svg>
+				<div class="points">
+					<div class="point-1">
+						<div class="tooltip">50</div>
+					</div>
+					<div class="point-2">
+						<div class="tooltip">41</div>
+					</div>
+					<div class="point-3">
+						<div class="tooltip">22</div>
+					</div>
+					<div class="point-4">
+						<div class="tooltip">36</div>
+					</div>
+					<div class="point-5">
+						<div class="tooltip">25</div>
+					</div>
+					<div class="point-6">
+						<div class="tooltip">13</div>
+					</div>
+					<div class="point-7">
+						<div class="tooltip">20</div>
+					</div>
+				</div>
+		</div>
+		<div class="days">
+			<span class="day">Mo</span>
+			<span class="day">Tu</span>
+			<span class="day">We</span>
+			<span class="day">Th</span>
+			<span class="day">Fr</span>
+			<span class="day">Sa</span>
+			<span class="day">Su</span>
+		</div>
+  </div>
+</div>
+</body>
+</html>
