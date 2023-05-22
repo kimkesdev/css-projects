@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    * {
+  * {
   box-sizing: border-box;
 }
 
@@ -43,14 +43,21 @@
 
 .menu div {
   height: 8px;
-  background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
   transition: background-color 0.2 ease-in-out;
   transition: all 0.5s;
 }
 
-.menu.active div:nth-child(2) {
+.menu div:nth-child(2), .menu div:nth-child(4) {
+  background-color: #c6c6c6;
+}
+
+.menu div:nth-child(1), .menu div:nth-child(3) {
+  background-color: #fff;
+}
+
+.menu.active div:nth-child(2), .menu.active div:nth-child(4) {
   transform: scale(0);
   opacity: 0;
 }
@@ -158,20 +165,22 @@
 </style>
 </head>
 <body>
-    <div class="frame">
-        <div class="center">
-              <div class="menu">
-                  <div class="line1"></div>
-                  <div class="line2"></div>
-                  <div class="line3"></div>
-              </div>
-        </div>
+  <div class="frame">
+    <div class="center">
+      <div class="menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
       </div>
+    </div>
+  </div>
 <script>
-let menu = document.querySelector(".menu");
+  let menu = document.querySelector(".menu");
 menu.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+</script>  
 </body>
 </html>
