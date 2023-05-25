@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.share-buttons {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  list-style: none;
+}
+
+.share-button {
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.share-button--facebook {
+  background-color: #395793 ;
+}
+
+.twitter-share-button {
+  background-color: #1c9deb ;
+}
+
+.share-button--pinterest {
+  background-color: #b8171c ;
+}
+
+.share-button--whatsapp {
+  background-color: #48a91f ;
+}
+</style>
+</head>
+<body>
+    <ul class="share-buttons">
+        <li>
+          <a class="share-button share-button--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.guud.tv/" target="_blank">
+            <i class="fa fa-facebook fa-2x" aria-hidden="true">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="share-button twitter-share-button" href="https://twitter.com/intent/tweet?text=Acabo%20de%20hacer%20un%20quiz%20impresionante&url=https://www.guud.tv/&hashtags=lidl,luckydip,guud" target="_blank">
+            <i class="fa fa-twitter fa-2x" aria-hidden="true">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="share-button share-button--pinterest" href="https://www.pinterest.com/pin/create/button/?media=https://images.unsplash.com/photo-1656137631612-1a2b279a1428?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&url=https://lidlrecipegenerator.guud.tv/&is_video=false&description=hola" target="blank" target="_blank">
+            <i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a class="share-button share-button--whatsapp" href="https://api.whatsapp.com/send?text=Acabo de realizar este en quiz: http://lidlluckydip.guud.tv" data-action="share/whatsapp/share"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+<script>
+const objectToGetParams = object => {
+  const params = Object.entries(object).
+  filter(([, value]) => value !== undefined && value !== null).
+  map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`);
+
+  return params.length > 0 ? `?${params.join('&')}` : '';
+};
+</script>      
+</body>
+</html>
