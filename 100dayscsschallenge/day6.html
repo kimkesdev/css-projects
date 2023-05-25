@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #e0bfff 0%, #88c2ee 100%);
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 75%;
+  background-color: #fffeb8;
+  border-radius: 3px;
+  box-shadow: 7px 4px 16px -9px #42445a;
+}
+
+.hero {
+  display: flex;
+  flex: 60%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.hero .avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.hero .avatar .circle-1 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 76px;
+  height: 76px;
+  top: -3px;
+  left: -3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #88c2ee #88c2ee #88c2ee transparent;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.hero .avatar .circle-2 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 82px;
+  height: 82px;
+  top: -6px;
+  left: -6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #88c2ee transparent #88c2ee #88c2ee;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.hero .avatar img {
+  border-radius: 50%;
+  background: #f5e8df;
+}
+.hero .avatar:hover .circle-1 {
+  transform: rotate(360deg);
+}
+.hero .avatar:hover .circle-2 {
+  transform: rotate(-360deg);
+}
+.hero .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #88c2ee;
+}
+.hero .title .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.hero .title .role {
+  font-size: 11px;
+  line-height: 15px;
+}
+.hero .actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.hero .actions button {
+  margin-bottom: 12px;
+  color: #88c2ee;
+  background: none;
+  border: 1px solid #88c2ee;
+  border-radius: 15px;
+  width: 120px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.hero .actions button:hover {
+  background: #e0bfff;
+  color: #fffeb8;
+}
+.hero .actions button a {
+  color: #88c2ee;
+  text-decoration: none;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 40%;
+}
+.statistics .card:not(:first-child) {
+  margin-top: 1px;
+}
+.statistics .card {
+  color: #fffeb8;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #e0bfff;
+  transition: all 0.3s ease-in-out;
+}
+.statistics .card:hover {
+  background: #88c2ee;
+}
+.statistics .card .number {
+  font-size: 15px;
+  font-weight: 600;
+}
+.statistics .card .name {
+  font-size: 11px;
+  line-height: 15px;
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <div class="hero">
+                <div class="avatar">
+                    <div class="circle-1"></div>
+                    <div class="circle-2"></div>
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/011/540/original/Happy_Writing.jpeg?1624583692" width="70" height="70" alt="Jessica Potter">
+                </div>
+                <div class="title">
+                    <span class="name">Kim Kes</span>
+                    <span class="role">Developer</span>
+                </div>
+                <div class="actions">
+                    <button><a href="www.linkedin.com" target="_blank">Follow</a></button>
+                    <button><a href="www.facebook.com" target="_blank">Message</a></button>
+                </div>
+            </div>
+            <div class="statistics">
+                <div class="card posts">
+                    <span class="number">153</span>
+                    <span class="name">Posts</span>
+                </div>
+                <div class="card likes">
+                    <span class="number">1591</span>
+                    <span class="name">Likes</span>
+                </div>
+                <div class="card followers">
+                    <span class="number">243</span>
+                    <span class="name">Followers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
