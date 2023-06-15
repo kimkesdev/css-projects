@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.frame {
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #845c74;
+  color: #ede3e9;
+  font-size: 12px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.center {
+  width: 212px;
+  height: 212px;
+}
+
+.point-set-1 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(0deg);
+}
+.point-set-1 .point-1, .point-set-1 .point-4, .point-set-1 .point-3, .point-set-1 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-1 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-1 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-1 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-2 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(6deg);
+}
+.point-set-2 .point-1, .point-set-2 .point-4, .point-set-2 .point-3, .point-set-2 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-2 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-2 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-2 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-3 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(12deg);
+}
+.point-set-3 .point-1, .point-set-3 .point-4, .point-set-3 .point-3, .point-set-3 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-3 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-3 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-3 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-4 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(18deg);
+}
+.point-set-4 .point-1, .point-set-4 .point-4, .point-set-4 .point-3, .point-set-4 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-4 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-4 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-4 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-5 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(24deg);
+}
+.point-set-5 .point-1, .point-set-5 .point-4, .point-set-5 .point-3, .point-set-5 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-5 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-5 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-5 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-6 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(30deg);
+}
+.point-set-6 .point-1, .point-set-6 .point-4, .point-set-6 .point-3, .point-set-6 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-6 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-6 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-6 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-7 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(36deg);
+}
+.point-set-7 .point-1, .point-set-7 .point-4, .point-set-7 .point-3, .point-set-7 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-7 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-7 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-7 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-8 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(42deg);
+}
+.point-set-8 .point-1, .point-set-8 .point-4, .point-set-8 .point-3, .point-set-8 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-8 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-8 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-8 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-9 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(48deg);
+}
+.point-set-9 .point-1, .point-set-9 .point-4, .point-set-9 .point-3, .point-set-9 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-9 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-9 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-9 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-10 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(54deg);
+}
+.point-set-10 .point-1, .point-set-10 .point-4, .point-set-10 .point-3, .point-set-10 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-10 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-10 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-10 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-11 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(60deg);
+}
+.point-set-11 .point-1, .point-set-11 .point-4, .point-set-11 .point-3, .point-set-11 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-11 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-11 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-11 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-12 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(66deg);
+}
+.point-set-12 .point-1, .point-set-12 .point-4, .point-set-12 .point-3, .point-set-12 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-12 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-12 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-12 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-13 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(72deg);
+}
+.point-set-13 .point-1, .point-set-13 .point-4, .point-set-13 .point-3, .point-set-13 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-13 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-13 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-13 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-14 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(78deg);
+}
+.point-set-14 .point-1, .point-set-14 .point-4, .point-set-14 .point-3, .point-set-14 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-14 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-14 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-14 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.point-set-15 {
+  position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transform: rotate(84deg);
+}
+.point-set-15 .point-1, .point-set-15 .point-4, .point-set-15 .point-3, .point-set-15 .point-2 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #dbc7d3;
+  border-radius: 50%;
+}
+.point-set-15 .point-2 {
+  top: 93px;
+  left: auto;
+  right: 0;
+}
+.point-set-15 .point-3 {
+  top: auto;
+  bottom: 0;
+}
+.point-set-15 .point-4 {
+  top: 93px;
+  left: 0;
+}
+
+.bg {
+  width: 212px;
+  height: 212px;
+  background: #422e3a;
+  border: 7px solid #533948;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.date {
+  position: absolute;
+  top: 68px;
+  width: 100%;
+}
+
+.time {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  margin: 4px 0;
+}
+
+.beat {
+  position: absolute;
+  top: 129px;
+  left: 57px;
+}
+.beat .beat-icon {
+  fill: #ae819c;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: beat 0.9s ease-in-out infinite;
+          animation: beat 0.9s ease-in-out infinite;
+}
+
+.energy {
+  position: absolute;
+  top: 129px;
+  right: 55px;
+}
+
+.spinner {
+  position: absolute;
+  width: 202px;
+  height: 202px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+.spinner circle {
+  stroke: #c09db2;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 0 9999;
+  -webkit-animation: spinner 5s linear infinite;
+          animation: spinner 5s linear infinite;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    stroke-dasharray: 0 9999;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dasharray: 625 9999;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    stroke-dasharray: 625 9999;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dasharray: 0 9999;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+
+@keyframes spinner {
+  from {
+    stroke-dasharray: 0 9999;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dasharray: 625 9999;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    stroke-dasharray: 625 9999;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dasharray: 0 9999;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.2);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.2);
+  }
+}
+</style>
+</head>
+<body>
+    
+<div class="frame">
+    <div class="center">
+        <div class="point-set-1">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-2">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-3">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-4">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-5">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-6">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-7">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-8">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-9">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-10">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-11">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-12">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-13">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-14">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+        <div class="point-set-15">
+            <div class="point-1"></div>
+            <div class="point-2"></div>
+            <div class="point-3"></div>
+            <div class="point-4"></div>
+        </div>
+         <div class='center bg'></div>
+    <div class='date'>Thu 15 Jun 2023</div>
+    <div class='time'>11:30</div>
+    <div class='beat'>
+      <svg class='beat-icon' width='200px' height='200.00px' viewBox='0 0 1024 1024' version='1.1'
+           xmlns='http://www.w3.org/2000/svg'>
+        <path
+          d='M1024 352c0 337-512 592-512 592S0 690 0 352C0 201.8 121.8 80 272 80c101.3 0 189.7 55.4 236.5 137.6 1.5 2.7 5.4 2.7 6.9 0C562.3 135.4 650.7 80 752 80c150.2 0 272 121.8 272 272z' />
+      </svg>
+      63
+    </div>
+    <div class='energy'>1423 kcal</div>
+    <svg class='spinner' viewBox='0 0 202 202' xlmns='https://www.w3.org/2000/svg'>
+      <circle cx='101' cy='101' r='99.5' stroke-linecap='round'></circle>
+    </svg>
+    </div>
+</div>
+</body>
+</html>
