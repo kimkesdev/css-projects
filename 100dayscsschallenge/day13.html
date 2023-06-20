@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #ffffff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.profile {
+  position: relative;
+  float: left;
+  width: 194px;
+  height: 194px;
+  margin: 4px 0px 0px 4px;
+  cursor: pointer;
+}
+.profile .overlay {
+  background: black;
+  position: relative;
+  top: -197px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 194px;
+  height: 194px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.profile .plus {
+  background: #ac40b8;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 2;
+  top: -318px;
+  left: 70px;
+  border-radius: 50%;
+  transform: scale(2);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.profile .plus::before {
+  display: block;
+  content: "";
+  background: white;
+  width: 2px;
+  height: 14px;
+  position: relative;
+  transform: rotate(90deg);
+  top: 18px;
+  left: 23px;
+}
+.profile .plus::after {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 14px;
+  position: relative;
+  background: white;
+  top: 4px;
+  left: 23px;
+}
+.profile:hover .overlay {
+  opacity: 0.4;
+}
+.profile:hover .plus {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.detail {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+  font-size: 0;
+}
+.detail.active {
+  pointer-events: all;
+}
+.detail.active .header {
+  transform: translate3d(0px, -28%, 0);
+  transition: all 0.6s ease-out;
+}
+.detail.active .image {
+  transform: translate3d(0, 0, 0);
+  transition: all 0.6s ease-out 0.3s;
+}
+.detail.active .infos {
+  transform: translate3d(0, 0, 0);
+  transition: all 0.6s ease-out;
+}
+.detail.active .close {
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  transition: background 0.3s ease-in-out, transform 0.6s ease-out 0.6s;
+}
+.detail .header {
+  transform: translate3d(0px, -134%, 0);
+  transition: all 0.6s ease-in 0.4s;
+}
+.detail .close {
+  background: #ac40b8;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  float: right;
+  top: 11px;
+  left: -8px;
+  border-radius: 50%;
+  transform: translate3d(0, -124%, 0) rotate(45deg);
+  transition: background 0.3s ease-in-out, transform 0.5s ease-in;
+}
+.detail .close::before {
+  display: block;
+  content: "";
+  background: white;
+  width: 2px;
+  height: 14px;
+  position: relative;
+  transform: rotate(90deg);
+  top: 18px;
+  left: 23px;
+  transition: all 0.3s ease-in-out;
+}
+.detail .close::after {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 14px;
+  position: relative;
+  background: white;
+  top: 4px;
+  left: 23px;
+  transition: all 0.3s ease-in-out;
+}
+.detail .close:hover {
+  background: white;
+}
+.detail .close:hover:after, .detail .close:hover:before {
+  background: #ac40b8;
+}
+.detail .image {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  top: 130px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 4px 6px 15px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -250px, 0);
+  transition: all 0.6s ease-in 0.2s;
+}
+.detail .image img {
+  width: 100%;
+  height: auto;
+}
+.detail .infos {
+  width: 100%;
+  background: #ac40b8;
+  height: 220px;
+  position: absolute;
+  transform: translate3d(0, 105%, 0);
+  top: 179px;
+  transition: all 0.6s ease-in 0.4s;
+}
+.detail .name {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  top: 67px;
+  position: relative;
+}
+.detail .action {
+  margin-top: 100px;
+  text-align: center;
+}
+.detail .action .btn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #fff;
+  margin: 0 20px;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.detail .action .btn:hover {
+  background: #fff;
+  color: #ac40b8;
+  box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.detail .action .btn .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 20px;
+  font-size: 19px;
+  padding-top: 12px;
+}
+.detail .action .btn .fa-phone {
+  font-size: 22px;
+}
+.detail .action .btn .fa-comment {
+  font-size: 20px;
+  padding-top: 10px;
+  left: 2px;
+}
+.detail .action .btn .fa-heart {
+  top: 1px;
+  left: 2px;
+}
+
+#detail-1 {
+  display: block;
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+        <!-- <div class="center"> -->
+        <div id="profile-1 " class="profile">
+          <img src="https://i.postimg.cc/FKqR0FNp/Andrew-Stader-Headshot-Low-Res-Transparent-Background.png" alt="" />
+          <div class="overlay"></div>
+          <div class="plus"></div>
+        </div>
+        <div id="profile-2 " class="profile">
+          <img src="https://i.postimg.cc/50n49xjb/888-8883444-headshot-no-background-scarf.png" alt="" />
+          <div class="overlay"></div>
+          <div class="plus"></div>
+        </div>
+        <div id="profile-3 " class="profile">
+          <img src="http://gocheckers.com/images/roster/andrew_poturalski_headshot_1718.png" alt="" />
+          <div class="overlay"></div>
+          <div class="plus"></div>
+        </div>
+        <div id="profile-4 " class="profile">
+          <img src="http://gocheckers.com/images/roster/josh_wesley_headshot_1718.png" alt="" />
+          <div class="overlay"></div>
+          <div class="plus"></div>
+        </div>
+        <div id="detail-1" class="detail ">
+          <div class="close"></div>
+        <img
+          class="header"
+          src="https://picsum.photos/id/683/800/530"
+          alt=""
+        />
+        <div class="image">
+          <img src="https://serving.photos.photobox.com/53464066dc132288128cb11531bb767f0082dcde75f3b845cd905d38c4223e95e0dc7bc9.jpg" alt="" />
+        </div>
+        <div class="infos">
+          <div class="name">Kim Kes</div>
+          <div class="action">
+            <div class="btn">
+              <span class="fa fa-phone"></span>
+            </div>
+            <div class="btn">
+              <span class="fa fa-comment"></span>
+            </div>
+            <div class="btn">
+              <span class="fa fa-heart"></span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+<script>
+const profiles = document.querySelectorAll('.profile')
+const detail = document.querySelector('.detail');
+const close = document.querySelector('.close');
+
+// Iterate over each profile element
+profiles.forEach((profile) => {
+    // Attach event listener to each profile element
+    profile.addEventListener('click', () => {
+      detail.classList.add('active')
+    });
+  });
+
+close.addEventListener('click', ()=>{
+    detail.classList.remove('active')
+})
+</script>      
+</body>
+</html>
