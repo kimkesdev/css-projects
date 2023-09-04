@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+body {
+  background: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 3px;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans";
+  background: #ead8e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kaart {
+  width: 240px;
+  height: 150px;
+  z-index: 0;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  top: 125px;
+  left: 80px;
+  border-radius: 3px;
+  box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+}
+
+.kaart.active {
+  z-index: 1;
+  pointer-events: all;
+  -webkit-animation: aparecer 0.6s ease-in-out both 0.5s;
+          animation: aparecer 0.6s ease-in-out both 0.5s;
+}
+
+.kaart.inactive {
+  z-index: 2;
+  -webkit-animation: desaparecer 0.5s ease-in-out both;
+          animation: desaparecer 0.5s ease-in-out both;
+}
+
+.kaart .card-title {
+  color: #616E7D;
+  font-size: 14px;
+  margin-bottom: 7px;
+  margin-top: 25px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.kaart .card-text {
+  color: #8391a1;
+  margin: 0;
+  line-height: 17px;
+  font-size: 12px;
+}
+
+.boton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #b47498;
+  height: 40px;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  line-height: 38px;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton:hover {
+  background: #8f4d72;
+}
+
+.number-punt {
+  background: #cfa6bd;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -31px;
+  right: -31px;
+  transform: rotate(45deg);
+}
+
+.number {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 600;
+}
+
+@-webkit-keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes desaparecer {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+</style>
+</head>
+<body>
+
+        <div class="square">
+          <div class="kaart active">
+            <div class="number-punt"></div>
+            <div class="number">1</div>
+            <h1 class="card-title">The couch</h1>
+            <p class="card-text">If you want to grow, get outside<br/> your comfort zone.</p>
+            <div class="boton">OK</div>
+          </div>
+          <div class="kaart ">
+            <div class="number-punt"></div>
+            <div class="number">2</div>
+            <h1 class="card-title">Failing is learning</h1>
+            <p class="card-text">Pick yourself up, dust yourself off,<br/> and start again.</p>
+            <div class="boton">OK</div>
+          </div>
+          <div class="kaart ">
+            <div class="number-punt"></div>
+            <div class="number">3</div>
+            <h1 class="card-title">Flowers and rainbows</h1>
+            <p class="card-text">Always be yourself,<br/> unless you can be a unicorn.</p>
+            <div class="boton">OK</div>
+          </div>
+        </div>
+        
+<script>
+    const kaarten = document.querySelectorAll(".kaart");
+const kaartActiva = document.querySelector(".active");
+const botones = document.querySelectorAll(".boton");
+let activo = 0;
+
+botones.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    switch (activo) {
+      case 0:
+        kaarten[0].classList.remove("active");
+        kaarten[0].classList.add("inactive");
+        kaarten[1].classList.add("active");
+        kaarten[1].classList.remove("inactive");
+        activo++;
+        break;
+      case 1:
+        kaarten[1].classList.remove("active");
+        kaarten[1].classList.add("inactive");
+        kaarten[2].classList.add("active");
+        kaarten[2].classList.remove("inactive");
+        activo++;
+        break;
+      case 2:
+        kaarten[2].classList.remove("active");
+        kaarten[2].classList.add("inactive");
+        kaarten[0].classList.add("active");
+        kaarten[0].classList.remove("inactive");
+        activo = 0
+        break;
+    }
+  });
+});
+
+</script>
+</body>
+</html>
